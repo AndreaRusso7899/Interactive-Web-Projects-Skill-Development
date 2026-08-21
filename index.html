@@ -30,7 +30,14 @@
     content="#0f172a"
   >
 
-  <title>Andrea Russo | Sviluppatore Software</title>
+  <title>
+    Andrea Russo | Sviluppatore Software
+  </title>
+
+
+  <!-- =========================================================
+       CSS PRINCIPALE
+       ========================================================= -->
 
   <link
     rel="stylesheet"
@@ -38,19 +45,23 @@
   >
 
 
-  <style>
+  <!-- =========================================================
+       CORREZIONI STRUTTURALI
+       ========================================================= -->
 
-    /* =========================================================
-       STRUTTURA GENERALE
-       ========================================================= */
+  <style>
 
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
       margin: 0 !important;
+      padding: 0 !important;
+
       min-height: 100vh !important;
+      width: 100% !important;
 
       display: flex !important;
       flex-direction: column !important;
@@ -58,24 +69,51 @@
       overflow-x: hidden !important;
     }
 
+
     body > header.site-header {
       order: 1 !important;
+
       position: relative !important;
+
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+
       width: 100% !important;
+
       transform: none !important;
     }
+
 
     body > main {
       order: 2 !important;
+
       position: relative !important;
+
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+
       width: 100% !important;
+
       transform: none !important;
     }
 
+
     body > footer.footer {
       order: 3 !important;
+
       position: relative !important;
+
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+
       width: 100% !important;
+
       transform: none !important;
     }
 
@@ -100,7 +138,7 @@
 
       z-index: 99999;
 
-      border: 1px solid rgba(255,255,255,0.18);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 50%;
 
       background:
@@ -110,7 +148,7 @@
           #0f766e
         );
 
-      color: white;
+      color: #ffffff;
 
       font-size: 1.55rem;
       font-weight: 800;
@@ -118,7 +156,8 @@
       cursor: pointer;
 
       box-shadow:
-        0 12px 30px rgba(15,23,42,0.28);
+        0 12px 30px
+        rgba(15, 23, 42, 0.28);
 
       opacity: 0;
       visibility: hidden;
@@ -126,10 +165,10 @@
       transform: translateY(15px);
 
       transition:
-        opacity .25s ease,
-        visibility .25s ease,
-        transform .25s ease,
-        box-shadow .25s ease;
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
 
@@ -147,11 +186,18 @@
       transform: translateY(-4px);
 
       box-shadow:
-        0 18px 40px rgba(37,99,235,.34);
+        0 18px 40px
+        rgba(37, 99, 235, 0.34);
     }
 
 
-    @media (max-width:650px) {
+    .back-to-top:active {
+
+      transform: translateY(-1px);
+    }
+
+
+    @media (max-width: 650px) {
 
       .back-to-top {
 
@@ -213,28 +259,33 @@
 
         <div class="nav-links">
 
+
           <a href="#chi-sono">
             Chi sono
           </a>
+
 
           <a href="#progetti">
             Progetti
           </a>
 
+
           <a href="#esperienza">
             Esperienza
           </a>
 
+
           <a href="#competenze">
             Competenze
           </a>
+
 
           <a href="#formazione">
             Formazione
           </a>
 
 
-          <!-- CV APERTO DIRETTAMENTE COME PDF -->
+          <!-- CV DIRETTO -->
 
           <a
             href="./informazioni/CV-Andrea-Russo.pdf"
@@ -248,6 +299,7 @@
           <a href="#contatti">
             Contatti
           </a>
+
 
         </div>
 
@@ -349,7 +401,9 @@
             </a>
 
 
-            <span>•</span>
+            <span>
+              •
+            </span>
 
 
             <a
@@ -361,10 +415,14 @@
             </a>
 
 
-            <span>•</span>
+            <span>
+              •
+            </span>
 
 
-            <a href="mailto:andre.m3m0@gmail.com">
+            <a
+              href="mailto:andre.m3m0@gmail.com"
+            >
               Email
             </a>
 
@@ -384,7 +442,7 @@
 
 
   <!-- =========================================================
-       MAIN
+       CONTENUTO PRINCIPALE
        ========================================================= -->
 
   <main>
@@ -405,19 +463,25 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             PROFILO
           </span>
+
 
           <h2>
             Chi sono
           </h2>
 
+
           <p>
+
             Un percorso orientato allo sviluppo software,
             all'apprendimento continuo
             e alla realizzazione di soluzioni concrete.
+
           </p>
+
 
         </div>
 
@@ -464,8 +528,9 @@
 
             <p>
 
-              Ho lavorato su applicazioni web utilizzate
-              in un contesto tecnico-amministrativo reale,
+              Ho lavorato su applicazioni web
+              utilizzate in un contesto
+              tecnico-amministrativo reale,
               occupandomi di implementazione,
               gestione dei dati,
               distribuzione,
@@ -609,24 +674,28 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             PORTFOLIO
           </span>
 
+
           <h2>
             Progetti Web Interattivi
           </h2>
+
 
           <p>
 
             Applicazioni sviluppate
             per consolidare HTML,
             CSS e JavaScript attraverso
-            la gestione degli eventi,
-            la logica applicativa
+            la logica applicativa,
+            la gestione degli eventi
             e la manipolazione del DOM.
 
           </p>
+
 
         </div>
 
@@ -645,13 +714,16 @@
 
             <div class="project-top">
 
+
               <span class="project-number">
                 01
               </span>
 
+
               <span class="project-status completed">
                 Completato
               </span>
+
 
             </div>
 
@@ -669,9 +741,10 @@
 
             <p>
 
-              Gioco interattivo nel quale
-              il giocatore deve individuare
-              un numero segreto generato casualmente
+              Gioco interattivo
+              nel quale il giocatore deve
+              individuare un numero segreto
+              generato casualmente
               tra 1 e 20.
 
             </p>
@@ -679,10 +752,12 @@
 
             <p>
 
-              L'applicazione gestisce feedback dinamici,
-              punteggio, record
-              e aggiornamenti dell'interfaccia
-              tramite JavaScript.
+              L'applicazione gestisce
+              feedback dinamici,
+              punteggio,
+              record
+              e aggiornamenti
+              dell'interfaccia.
 
             </p>
 
@@ -730,13 +805,10 @@
 
 
 
-            <!-- LINK ORIGINALE FUNZIONANTE -->
-
             <a
-              class="project-button"
-              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/guess-my-number/"
-              target="_blank"
-              rel="noopener noreferrer"
+              class="project-button project-resolver"
+              href="./guess-my-number/"
+              data-project="guess"
             >
 
               Apri il progetto
@@ -761,13 +833,16 @@
 
             <div class="project-top">
 
+
               <span class="project-number">
                 02
               </span>
 
+
               <span class="project-status completed">
                 Completato
               </span>
+
 
             </div>
 
@@ -795,7 +870,8 @@
 
             <p>
 
-              JavaScript gestisce il giocatore attivo,
+              JavaScript gestisce
+              il giocatore attivo,
               i punteggi temporanei,
               il punteggio globale,
               le condizioni di vittoria
@@ -847,13 +923,10 @@
 
 
 
-            <!-- LINK ORIGINALE FUNZIONANTE -->
-
             <a
-              class="project-button"
-              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/pig-game/"
-              target="_blank"
-              rel="noopener noreferrer"
+              class="project-button project-resolver"
+              href="./pig-game/"
+              data-project="pig"
             >
 
               Apri il progetto
@@ -878,13 +951,16 @@
 
             <div class="project-top">
 
+
               <span class="project-number">
                 03
               </span>
 
+
               <span class="project-status completed">
                 Completato
               </span>
+
 
             </div>
 
@@ -902,9 +978,11 @@
 
             <p>
 
-              Progetto dedicato alla creazione
-              e gestione di finestre modali
-              interattive attraverso HTML,
+              Progetto dedicato
+              alla creazione
+              e gestione di finestre
+              modali interattive
+              attraverso HTML,
               CSS e JavaScript.
 
             </p>
@@ -913,7 +991,7 @@
             <p>
 
               L'applicazione gestisce
-              apertura e chiusura delle finestre,
+              apertura e chiusura,
               overlay,
               classi CSS,
               eventi del mouse
@@ -965,13 +1043,10 @@
 
 
 
-            <!-- LINK ORIGINALE FUNZIONANTE -->
-
             <a
-              class="project-button"
-              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/progetto-modal/"
-              target="_blank"
-              rel="noopener noreferrer"
+              class="project-button project-resolver"
+              href="./progetto-modal/"
+              data-project="modal"
             >
 
               Apri il progetto
@@ -1009,13 +1084,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             ESPERIENZA PROFESSIONALE
           </span>
 
+
           <h2>
             Sviluppo software in un contesto reale
           </h2>
+
 
           <p>
 
@@ -1025,6 +1103,7 @@
             tecnico-amministrative.
 
           </p>
+
 
         </div>
 
@@ -1038,19 +1117,24 @@
 
             <div>
 
+
               <span class="experience-type">
                 Esperienza professionale
               </span>
+
 
               <h3>
                 Comune di Torre Annunziata
               </h3>
 
+
               <h4>
                 Area Tecnica
               </h4>
 
+
             </div>
+
 
 
             <span class="experience-position">
@@ -1107,6 +1191,7 @@
           </div>
 
 
+
           <div class="professional-project-content">
 
 
@@ -1139,12 +1224,29 @@
 
             <div class="feature-grid">
 
-              <span>Ricerca dati</span>
-              <span>Dashboard</span>
-              <span>Gestione utenti</span>
-              <span>Audit log</span>
-              <span>Esportazione dati</span>
-              <span>Caricamento documentale</span>
+              <span>
+                Ricerca dati
+              </span>
+
+              <span>
+                Dashboard
+              </span>
+
+              <span>
+                Gestione utenti
+              </span>
+
+              <span>
+                Audit log
+              </span>
+
+              <span>
+                Esportazione dati
+              </span>
+
+              <span>
+                Caricamento documentale
+              </span>
 
             </div>
 
@@ -1166,6 +1268,7 @@
           <div class="professional-project-number">
             02
           </div>
+
 
 
           <div class="professional-project-content">
@@ -1198,12 +1301,29 @@
 
             <div class="feature-grid">
 
-              <span>Ricerca pratiche</span>
-              <span>Inserimento dati</span>
-              <span>Aggiornamento</span>
-              <span>Importazione Excel</span>
-              <span>Generazione PDF</span>
-              <span>Tracciamento modifiche</span>
+              <span>
+                Ricerca pratiche
+              </span>
+
+              <span>
+                Inserimento dati
+              </span>
+
+              <span>
+                Aggiornamento
+              </span>
+
+              <span>
+                Importazione Excel
+              </span>
+
+              <span>
+                Generazione PDF
+              </span>
+
+              <span>
+                Tracciamento modifiche
+              </span>
 
             </div>
 
@@ -1225,6 +1345,7 @@
           <div class="professional-project-number">
             03
           </div>
+
 
 
           <div class="professional-project-content">
@@ -1254,12 +1375,29 @@
 
             <div class="feature-grid">
 
-              <span>Ticket</span>
-              <span>Utenti</span>
-              <span>Uffici</span>
-              <span>Notifiche</span>
-              <span>Knowledge Base</span>
-              <span>Report</span>
+              <span>
+                Ticket
+              </span>
+
+              <span>
+                Utenti
+              </span>
+
+              <span>
+                Uffici
+              </span>
+
+              <span>
+                Notifiche
+              </span>
+
+              <span>
+                Knowledge Base
+              </span>
+
+              <span>
+                Report
+              </span>
 
             </div>
 
@@ -1357,6 +1495,7 @@
           </div>
 
 
+
           <div class="professional-project-content">
 
 
@@ -1382,6 +1521,7 @@
                 >
 
               </div>
+
 
 
               <div>
@@ -1420,12 +1560,29 @@
 
             <div class="feature-grid">
 
-              <span>Configurazione ambiente</span>
-              <span>Servizi applicativi</span>
-              <span>Avvio automatico</span>
-              <span>Deploy</span>
-              <span>Hosting applicazioni</span>
-              <span>Monitoraggio</span>
+              <span>
+                Configurazione ambiente
+              </span>
+
+              <span>
+                Servizi applicativi
+              </span>
+
+              <span>
+                Avvio automatico
+              </span>
+
+              <span>
+                Deploy
+              </span>
+
+              <span>
+                Hosting applicazioni
+              </span>
+
+              <span>
+                Monitoraggio
+              </span>
 
             </div>
 
@@ -1456,13 +1613,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             STACK TECNOLOGICO
           </span>
 
+
           <h2>
             Competenze tecniche
           </h2>
+
 
           <p>
 
@@ -1472,6 +1632,7 @@
             e le esperienze professionali.
 
           </p>
+
 
         </div>
 
@@ -1587,9 +1748,17 @@
 
             <div class="technology-list">
 
-              <span>Unity</span>
-              <span>C#</span>
-              <span>Scripting</span>
+              <span>
+                Unity
+              </span>
+
+              <span>
+                C#
+              </span>
+
+              <span>
+                Scripting
+              </span>
 
             </div>
 
@@ -1605,12 +1774,29 @@
 
             <div class="technology-list">
 
-              <span>Electron</span>
-              <span>React</span>
-              <span>JavaScript</span>
-              <span>JSON</span>
-              <span>SQLite</span>
-              <span>Vite</span>
+              <span>
+                Electron
+              </span>
+
+              <span>
+                React
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                JSON
+              </span>
+
+              <span>
+                SQLite
+              </span>
+
+              <span>
+                Vite
+              </span>
 
             </div>
 
@@ -1626,10 +1812,21 @@
 
             <div class="technology-list">
 
-              <span>FreeBSD</span>
-              <span>Deploy</span>
-              <span>Configurazione servizi</span>
-              <span>Monitoraggio</span>
+              <span>
+                FreeBSD
+              </span>
+
+              <span>
+                Deploy
+              </span>
+
+              <span>
+                Configurazione servizi
+              </span>
+
+              <span>
+                Monitoraggio
+              </span>
 
             </div>
 
@@ -1645,12 +1842,29 @@
 
             <div class="technology-list">
 
-              <span>IntelliJ</span>
-              <span>Visual Studio</span>
-              <span>Eclipse</span>
-              <span>NetBeans</span>
-              <span>Dev-C++</span>
-              <span>Android Studio</span>
+              <span>
+                IntelliJ
+              </span>
+
+              <span>
+                Visual Studio
+              </span>
+
+              <span>
+                Eclipse
+              </span>
+
+              <span>
+                NetBeans
+              </span>
+
+              <span>
+                Dev-C++
+              </span>
+
+              <span>
+                Android Studio
+              </span>
 
             </div>
 
@@ -1677,13 +1891,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             TECNOLOGIE
           </span>
 
+
           <h2>
             Tecnologie principali
           </h2>
+
 
         </div>
 
@@ -2011,6 +2228,7 @@
           </div>
 
 
+
           <div class="education-content">
 
 
@@ -2071,19 +2289,23 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             COMPETENZE PERSONALI
           </span>
 
+
           <h2>
             Competenze trasversali
           </h2>
+
 
         </div>
 
 
 
         <div class="soft-skills-grid">
+
 
 
           <article class="soft-skill-card">
@@ -2185,13 +2407,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             LINGUE
           </span>
 
+
           <h2>
             Competenze linguistiche
           </h2>
+
 
         </div>
 
@@ -2269,13 +2494,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             INTERESSI
           </span>
 
+
           <h2>
             Hobby e interessi
           </h2>
+
 
         </div>
 
@@ -2438,13 +2666,16 @@
 
         <div class="section-header">
 
+
           <span class="section-kicker">
             CONTATTI
           </span>
 
+
           <h2>
             Entriamo in contatto
           </h2>
+
 
           <p>
 
@@ -2455,6 +2686,7 @@
             attraverso i canali seguenti.
 
           </p>
+
 
         </div>
 
@@ -2639,7 +2871,7 @@
 
 
   <!-- =========================================================
-       FRECCIA TORNA SU
+       PULSANTE TORNA IN ALTO
        ========================================================= -->
 
   <button
@@ -2660,8 +2892,9 @@
 
   <script>
 
-
-    /* ANNO AUTOMATICO */
+    /* =========================================================
+       ANNO AUTOMATICO
+       ========================================================= */
 
     const currentYear =
       document.getElementById("currentYear");
@@ -2676,7 +2909,9 @@
 
 
 
-    /* FRECCIA TORNA SU */
+    /* =========================================================
+       FRECCIA TORNA IN ALTO
+       ========================================================= */
 
     const backToTopButton =
       document.getElementById("backToTop");
@@ -2702,7 +2937,6 @@
       }
 
 
-
       window.addEventListener(
         "scroll",
         updateBackToTop,
@@ -2713,7 +2947,6 @@
 
 
       updateBackToTop();
-
 
 
       backToTopButton.addEventListener(
@@ -2735,6 +2968,305 @@
 
 
     }
+
+
+
+    /* =========================================================
+       RISOLUZIONE AUTOMATICA DEI PROGETTI
+       =========================================================
+
+       Il codice prova più percorsi.
+
+       Questo evita il 404 se nel repository
+       il nome della cartella è stato cambiato.
+
+       ========================================================= */
+
+
+    const projectPaths = {
+
+
+      guess: [
+
+        "./guess-my-number/",
+
+        "./guess-my-number/index.html",
+
+        "./indovina%20il%20mio%20numero/",
+
+        "./indovina%20il%20mio%20numero/index.html",
+
+        "./indovina-il-mio-numero/",
+
+        "./indovina-il-mio-numero/index.html"
+
+      ],
+
+
+      pig: [
+
+        "./pig-game/",
+
+        "./pig-game/index.html",
+
+        "./gioco%20del%20maiale/",
+
+        "./gioco%20del%20maiale/index.html",
+
+        "./gioco-del-maiale/",
+
+        "./gioco-del-maiale/index.html"
+
+      ],
+
+
+      modal: [
+
+        "./progetto-modal/",
+
+        "./progetto-modal/index.html",
+
+        "./ambiente-modale/",
+
+        "./ambiente-modale/index.html",
+
+        "./modal/",
+
+        "./modal/index.html"
+
+      ]
+
+
+    };
+
+
+
+    async function findWorkingProject(projectName) {
+
+
+      const paths =
+        projectPaths[projectName];
+
+
+      if (!paths) {
+
+        return null;
+
+      }
+
+
+      for (const path of paths) {
+
+
+        try {
+
+
+          const response =
+            await fetch(
+              path,
+              {
+                method: "GET",
+                cache: "no-store"
+              }
+            );
+
+
+          if (response.ok) {
+
+            return path;
+
+          }
+
+
+        } catch (error) {
+
+          console.warn(
+            "Percorso non disponibile:",
+            path
+          );
+
+        }
+
+
+      }
+
+
+      return null;
+
+    }
+
+
+
+    const projectButtons =
+      document.querySelectorAll(
+        ".project-resolver"
+      );
+
+
+    projectButtons.forEach(
+      function (button) {
+
+
+        button.addEventListener(
+          "click",
+          async function (event) {
+
+
+            event.preventDefault();
+
+
+            const projectName =
+              button.dataset.project;
+
+
+            /*
+             * Apro immediatamente una scheda vuota.
+             * Questo evita il blocco popup del browser.
+             */
+
+            const projectWindow =
+              window.open(
+                "about:blank",
+                "_blank"
+              );
+
+
+            if (projectWindow) {
+
+
+              projectWindow.document.write(
+                `
+                <!DOCTYPE html>
+
+                <html lang="it">
+
+                <head>
+
+                  <meta charset="UTF-8">
+
+                  <title>
+                    Apertura progetto...
+                  </title>
+
+                  <style>
+
+                    body {
+                      margin: 0;
+                      min-height: 100vh;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background: #0f172a;
+                      color: #ffffff;
+                      font-family:
+                        Arial,
+                        Helvetica,
+                        sans-serif;
+                    }
+
+                    .loader {
+                      text-align: center;
+                    }
+
+                    .loader h2 {
+                      margin-bottom: 10px;
+                    }
+
+                    .loader p {
+                      color: #cbd5e1;
+                    }
+
+                  </style>
+
+                </head>
+
+                <body>
+
+                  <div class="loader">
+
+                    <h2>
+                      Apertura progetto...
+                    </h2>
+
+                    <p>
+                      Verifica del collegamento.
+                    </p>
+
+                  </div>
+
+                </body>
+
+                </html>
+                `
+              );
+
+
+              projectWindow.document.close();
+
+            }
+
+
+
+            const workingPath =
+              await findWorkingProject(
+                projectName
+              );
+
+
+
+            if (workingPath) {
+
+
+              if (projectWindow) {
+
+                projectWindow.location.href =
+                  workingPath;
+
+              } else {
+
+                window.location.href =
+                  workingPath;
+
+              }
+
+
+              return;
+
+            }
+
+
+
+            /*
+             * Se nessuno dei percorsi viene trovato,
+             * non mostriamo una pagina GitHub Pages 404.
+             * Portiamo invece al repository GitHub.
+             */
+
+            const repositoryUrl =
+              "https://github.com/AndreaRusso7899/Interactive-Web-Projects-Skill-Development";
+
+
+            if (projectWindow) {
+
+              projectWindow.location.href =
+                repositoryUrl;
+
+            } else {
+
+              window.open(
+                repositoryUrl,
+                "_blank"
+              );
+
+            }
+
+
+          }
+        );
+
+
+      }
+    );
 
 
   </script>
