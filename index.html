@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,12 @@
 
   <meta
     name="description"
-    content="Andrea Russo - Software Developer portfolio. Interactive web projects, professional experience, technologies and curriculum vitae."
+    content="Portfolio professionale di Andrea Russo, sviluppatore software e laureando in Informatica. Progetti web, esperienza professionale, tecnologie, competenze e Curriculum Vitae."
+  >
+
+  <meta
+    name="keywords"
+    content="Andrea Russo, sviluppatore software, sviluppatore web, Python, Django, React, TypeScript, JavaScript, MySQL, HTML, CSS, FreeBSD, portfolio"
   >
 
   <meta
@@ -19,1717 +24,343 @@
     content="Andrea Russo"
   >
 
-  <title>Andrea Russo | Software Developer</title>
+  <meta name="theme-color" content="#0f172a">
 
-  <style>
+  <title>Andrea Russo | Sviluppatore Software</title>
 
-    /* =========================================================
-       DESIGN SYSTEM
-       ========================================================= */
+  <!-- CSS PRINCIPALE -->
+  <link rel="stylesheet" href="style.css">
 
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-soft: #f8fafc;
-
-      --primary: #0f172a;
-      --primary-soft: #1e293b;
-
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --cyan: #0891b2;
-      --teal: #0f766e;
-
-      --text: #334155;
-      --muted: #64748b;
-
-      --border: #e2e8f0;
-
-      --shadow-sm:
-        0 4px 14px rgba(15, 23, 42, 0.06);
-
-      --shadow-md:
-        0 14px 32px rgba(15, 23, 42, 0.10);
-
-      --shadow-lg:
-        0 24px 60px rgba(15, 23, 42, 0.16);
-
-      --radius: 20px;
-      --radius-small: 14px;
-    }
-
-
-    /* =========================================================
-       RESET
-       ========================================================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 30px;
-    }
-
-    body {
-      min-height: 100vh;
-
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      color: var(--text);
-
-      line-height: 1.7;
-
-      background:
-        radial-gradient(
-          circle at 10% 10%,
-          rgba(37, 99, 235, 0.05),
-          transparent 25%
-        ),
-        radial-gradient(
-          circle at 90% 20%,
-          rgba(15, 118, 110, 0.05),
-          transparent 25%
-        ),
-        var(--bg);
-
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
-
-    /* =========================================================
-       CONTAINER
-       ========================================================= */
-
-    .container {
-      width: min(1180px, 92%);
-      margin: 0 auto;
-    }
-
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
-    header {
-      position: relative;
-
-      overflow: hidden;
-
-      min-height: 570px;
-
-      display: flex;
-      align-items: center;
-
-      color: white;
-
-      background:
-        radial-gradient(
-          circle at 15% 20%,
-          rgba(59, 130, 246, 0.34),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 85% 30%,
-          rgba(20, 184, 166, 0.22),
-          transparent 30%
-        ),
-        linear-gradient(
-          135deg,
-          #020617 0%,
-          #0f172a 35%,
-          #172554 67%,
-          #134e4a 100%
-        );
-
-      box-shadow:
-        0 20px 50px rgba(15, 23, 42, 0.23);
-    }
-
-    header::before {
-      content: "";
-
-      position: absolute;
-
-      width: 500px;
-      height: 500px;
-
-      right: -200px;
-      top: -250px;
-
-      border-radius: 50%;
-
-      background:
-        rgba(255, 255, 255, 0.035);
-    }
-
-    header::after {
-      content: "";
-
-      position: absolute;
-
-      width: 350px;
-      height: 350px;
-
-      left: -170px;
-      bottom: -180px;
-
-      border-radius: 50%;
-
-      background:
-        rgba(255, 255, 255, 0.025);
-    }
-
-    .hero {
-      position: relative;
-      z-index: 2;
-
-      text-align: center;
-
-      padding: 5rem 0;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      padding: 0.48rem 0.9rem;
-
-      margin-bottom: 1.4rem;
-
-      border:
-        1px solid rgba(255, 255, 255, 0.18);
-
-      border-radius: 999px;
-
-      color:
-        rgba(255, 255, 255, 0.88);
-
-      background:
-        rgba(255, 255, 255, 0.07);
-
-      backdrop-filter:
-        blur(10px);
-
-      font-size: 0.85rem;
-      font-weight: 700;
-
-      letter-spacing: 0.04em;
-    }
-
-    .hero h1 {
-      max-width: 1000px;
-
-      margin: 0 auto;
-
-      color: #ffffff;
-
-      font-size:
-        clamp(2.7rem, 6vw, 5rem);
-
-      line-height: 1.05;
-
-      font-weight: 850;
-
-      letter-spacing: -0.055em;
-    }
-
-    .hero h1 span {
-      background:
-        linear-gradient(
-          90deg,
-          #93c5fd,
-          #67e8f9,
-          #5eead4
-        );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      color: transparent;
-    }
-
-    .hero-subtitle {
-      margin-top: 1.1rem;
-
-      color:
-        rgba(255, 255, 255, 0.92);
-
-      font-size:
-        clamp(1.15rem, 2.2vw, 1.45rem);
-
-      font-weight: 600;
-    }
-
-    .hero-description {
-      max-width: 800px;
-
-      margin:
-        1.3rem auto 0;
-
-      color:
-        rgba(255, 255, 255, 0.72);
-
-      font-size: 1rem;
-
-      line-height: 1.85;
-    }
-
-
-    /* =========================================================
-       BUTTONS
-       ========================================================= */
-
-    .hero-actions {
-      display: flex;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 0.8rem;
-
-      margin-top: 2.1rem;
-    }
-
-    .btn {
-      min-height: 47px;
-
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      gap: 0.4rem;
-
-      padding:
-        0.8rem 1.25rem;
-
-      border-radius: 999px;
-
-      border:
-        1px solid transparent;
-
-      font-size: 0.9rem;
-
-      font-weight: 750;
-
-      transition:
-        0.25s ease;
-    }
-
-    .btn:hover {
-      transform:
-        translateY(-3px);
-    }
-
-    .btn-light {
-      color: #0f172a;
-
-      background: white;
-
-      box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .btn-light:hover {
-      color: var(--blue-dark);
-
-      background: #f8fafc;
-    }
-
-    .btn-glass {
-      color: white;
-
-      border-color:
-        rgba(255, 255, 255, 0.22);
-
-      background:
-        rgba(255, 255, 255, 0.07);
-
-      backdrop-filter:
-        blur(8px);
-    }
-
-    .btn-glass:hover {
-      border-color:
-        rgba(255, 255, 255, 0.45);
-
-      background:
-        rgba(255, 255, 255, 0.14);
-    }
-
-    .btn-blue {
-      color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2563eb,
-          #1d4ed8
-        );
-
-      box-shadow:
-        0 10px 24px
-        rgba(37, 99, 235, 0.23);
-    }
-
-    .btn-blue:hover {
-      box-shadow:
-        0 15px 32px
-        rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-secondary {
-      color: var(--primary);
-
-      background: #ffffff;
-
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      color: var(--blue-dark);
-
-      border-color: #bfdbfe;
-
-      background: #eff6ff;
-    }
-
-
-    /* =========================================================
-       MAIN
-       ========================================================= */
-
-    main {
-      padding:
-        3rem 0 5rem;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    .section-card {
-      padding: 2.3rem;
-
-      background:
-        linear-gradient(
-          180deg,
-          #ffffff 0%,
-          #ffffff 80%,
-          #fcfdff 100%
-        );
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius);
-
-      box-shadow:
-        var(--shadow-sm);
-
-      transition:
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
-    }
-
-    .section-card:hover {
-      box-shadow:
-        var(--shadow-md);
-    }
-
-    .section-heading {
-      margin-bottom: 1.5rem;
-    }
-
-    .eyebrow {
-      display: block;
-
-      margin-bottom: 0.35rem;
-
-      color: var(--blue);
-
-      font-size: 0.77rem;
-
-      font-weight: 800;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      position: relative;
-
-      padding-left: 1rem;
-
-      color: var(--primary);
-
-      font-size:
-        clamp(1.4rem, 2.5vw, 1.85rem);
-
-      line-height: 1.3;
-
-      font-weight: 820;
-
-      letter-spacing: -0.025em;
-    }
-
-    .section-title::before {
-      content: "";
-
-      position: absolute;
-
-      left: 0;
-      top: 7%;
-
-      width: 5px;
-      height: 86%;
-
-      border-radius: 999px;
-
-      background:
-        linear-gradient(
-          180deg,
-          var(--blue),
-          #14b8a6
-        );
-    }
-
-    .section-description {
-      max-width: 900px;
-
-      margin-top: 0.8rem;
-
-      color: var(--muted);
-
-      font-size: 0.97rem;
-    }
-
-
-    /* =========================================================
-       PROJECTS
-       ========================================================= */
-
-    .projects-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-      gap: 1.2rem;
-    }
-
-    .project-card {
-      position: relative;
-
-      overflow: hidden;
-
-      display: flex;
-
-      flex-direction: column;
-
-      min-height: 320px;
-
-      padding: 1.55rem;
-
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #f8fafc
-        );
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      box-shadow:
-        0 4px 12px
-        rgba(15, 23, 42, 0.045);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .project-card::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 4px;
-
-      opacity: 0;
-
-      background:
-        linear-gradient(
-          90deg,
-          #2563eb,
-          #14b8a6
-        );
-
-      transition:
-        opacity 0.25s ease;
-    }
-
-    .project-card:hover {
-      transform:
-        translateY(-7px);
-
-      border-color: #cbd5e1;
-
-      box-shadow:
-        var(--shadow-md);
-    }
-
-    .project-card:hover::before {
-      opacity: 1;
-    }
-
-    .project-number {
-      margin-bottom: 1rem;
-
-      color: var(--blue);
-
-      font-size: 0.78rem;
-
-      font-weight: 800;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-    }
-
-    .project-card h3 {
-      margin-bottom: 0.75rem;
-
-      color: var(--primary);
-
-      font-size: 1.22rem;
-
-      font-weight: 800;
-    }
-
-    .project-card p {
-      flex-grow: 1;
-
-      color: var(--muted);
-
-      font-size: 0.92rem;
-
-      line-height: 1.72;
-    }
-
-    .tags {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 0.4rem;
-
-      margin: 1.1rem 0;
-    }
-
-    .tag {
-      padding:
-        0.31rem 0.62rem;
-
-      border:
-        1px solid #dbeafe;
-
-      border-radius: 999px;
-
-      color: #1e40af;
-
-      background: #eff6ff;
-
-      font-size: 0.72rem;
-
-      font-weight: 750;
-    }
-
-    .project-link {
-      display: inline-flex;
-
-      align-items: center;
-
-      margin-top: auto;
-
-      color: var(--blue);
-
-      font-size: 0.88rem;
-
-      font-weight: 800;
-    }
-
-    .project-link::after {
-      content: " →";
-
-      margin-left: 0.25rem;
-
-      transition:
-        transform 0.2s ease;
-    }
-
-    .project-link:hover::after {
-      transform:
-        translateX(4px);
-    }
-
-
-    /* =========================================================
-       SKILLS
-       ========================================================= */
-
-    .skills-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-      gap: 1.5rem;
-    }
-
-    .skill-list {
-      list-style: none;
-    }
-
-    .skill-list li {
-      position: relative;
-
-      padding:
-        0.75rem 0 0.75rem 1.6rem;
-
-      border-bottom:
-        1px solid #eef2f7;
-
-      color: var(--text);
-
-      font-size: 0.94rem;
-    }
-
-    .skill-list li:last-child {
-      border-bottom: 0;
-    }
-
-    .skill-list li::before {
-      content: "✓";
-
-      position: absolute;
-
-      left: 0;
-      top: 0.72rem;
-
-      width: 20px;
-      height: 20px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 50%;
-
-      color: #047857;
-
-      background: #d1fae5;
-
-      font-size: 0.7rem;
-
-      font-weight: 900;
-    }
-
-
-    /* =========================================================
-       PROFESSIONAL EXPERIENCE
-       ========================================================= */
-
-    .experience-item {
-      position: relative;
-
-      margin-top: 1rem;
-
-      padding:
-        1.45rem 1.5rem 1.45rem 1.7rem;
-
-      overflow: hidden;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      background:
-        linear-gradient(
-          135deg,
-          #f8fafc,
-          #ffffff
-        );
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .experience-item::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 0;
-
-      width: 4px;
-      height: 100%;
-
-      background:
-        linear-gradient(
-          180deg,
-          #2563eb,
-          #14b8a6
-        );
-    }
-
-    .experience-item:hover {
-      transform:
-        translateX(4px);
-
-      box-shadow:
-        var(--shadow-sm);
-    }
-
-    .experience-item h3 {
-      margin-bottom: 0.25rem;
-
-      color: var(--primary);
-
-      font-size: 1.08rem;
-
-      font-weight: 800;
-    }
-
-    .experience-role {
-      display: block;
-
-      margin-bottom: 0.7rem;
-
-      color: var(--blue);
-
-      font-size: 0.84rem;
-
-      font-weight: 750;
-    }
-
-    .experience-item p {
-      color: var(--muted);
-
-      font-size: 0.93rem;
-    }
-
-
-    /* =========================================================
-       TECHNOLOGIES
-       ========================================================= */
-
-    .tech-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-      gap: 1rem;
-    }
-
-    .tech-card {
-      min-height: 220px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 1.25rem;
-
-      text-align: center;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      background:
-        linear-gradient(
-          145deg,
-          #ffffff,
-          #f8fafc
-        );
-
-      box-shadow:
-        0 4px 12px
-        rgba(15, 23, 42, 0.04);
-
-      transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .tech-card:hover {
-      transform:
-        translateY(-6px);
-
-      border-color: #cbd5e1;
-
-      box-shadow:
-        var(--shadow-md);
-    }
-
-    .tech-logo-wrap {
-      width: 115px;
-      height: 78px;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      margin-bottom: 0.8rem;
-    }
-
-    .tech-logo-wrap img {
-      max-width: 85px;
-      max-height: 62px;
-
-      object-fit: contain;
-
-      transition:
-        transform 0.25s ease;
-    }
-
-    .tech-card:hover .tech-logo-wrap img {
-      transform:
-        scale(1.07);
-    }
-
-    .tech-card h3 {
-      margin-bottom: 0.35rem;
-
-      color: var(--primary);
-
-      font-size: 1rem;
-
-      font-weight: 800;
-    }
-
-    .tech-card p {
-      max-width: 220px;
-
-      color: var(--muted);
-
-      font-size: 0.82rem;
-
-      line-height: 1.55;
-    }
-
-
-    /* =========================================================
-       FREEBSD CUSTOM LOGO
-       ========================================================= */
-
-    .freebsd-mark {
-      width: 78px;
-      height: 78px;
-
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      margin: 0 auto;
-
-      border:
-        5px solid #e31b23;
-
-      border-radius: 50%;
-
-      background: #ffffff;
-
-      box-shadow:
-        inset 0 0 0 3px #ffffff;
-    }
-
-    .freebsd-mark::before,
-    .freebsd-mark::after {
-      content: "";
-
-      position: absolute;
-
-      top: -10px;
-
-      width: 23px;
-      height: 27px;
-
-      border:
-        4px solid #e31b23;
-
-      background: white;
-    }
-
-    .freebsd-mark::before {
-      left: 4px;
-
-      border-radius:
-        80% 20% 80% 20%;
-
-      transform:
-        rotate(-32deg);
-    }
-
-    .freebsd-mark::after {
-      right: 4px;
-
-      border-radius:
-        20% 80% 20% 80%;
-
-      transform:
-        rotate(32deg);
-    }
-
-    .freebsd-eye {
-      width: 43px;
-      height: 43px;
-
-      border-radius: 50%;
-
-      background:
-        linear-gradient(
-          135deg,
-          transparent 0 42%,
-          #e31b23 43% 100%
-        );
-    }
-
-
-    /* =========================================================
-       EDUCATION
-       ========================================================= */
-
-    .education-box {
-      display: flex;
-
-      align-items: flex-start;
-
-      gap: 1rem;
-
-      padding: 1.35rem;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      background: var(--surface-soft);
-    }
-
-    .education-icon {
-      width: 48px;
-      height: 48px;
-
-      flex-shrink: 0;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 12px;
-
-      color: white;
-
-      background:
-        linear-gradient(
-          135deg,
-          #2563eb,
-          #0891b2
-        );
-
-      font-size: 1.25rem;
-    }
-
-    .education-box h3 {
-      color: var(--primary);
-
-      font-size: 1.1rem;
-    }
-
-    .education-box strong {
-      color: var(--blue);
-    }
-
-    .education-box p {
-      margin-top: 0.4rem;
-
-      color: var(--muted);
-
-      font-size: 0.92rem;
-    }
-
-
-    /* =========================================================
-       CV
-       ========================================================= */
-
-    .cv-section {
-      text-align: center;
-    }
-
-    .cv-section .section-heading {
-      text-align: left;
-    }
-
-    .cv-intro {
-      max-width: 700px;
-
-      margin:
-        0 auto 1.5rem;
-
-      color: var(--muted);
-
-      font-size: 0.95rem;
-    }
-
-    .cv-actions {
-      display: flex;
-
-      justify-content: center;
-
-      flex-wrap: wrap;
-
-      gap: 0.75rem;
-
-      margin-bottom: 1.8rem;
-    }
-
-    .pdf-container {
-      width: 100%;
-
-      max-width: 900px;
-
-      height: 650px;
-
-      margin: 0 auto;
-
-      overflow: hidden;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      background: #eef2f7;
-
-      box-shadow:
-        var(--shadow-md);
-    }
-
-    .pdf-container iframe {
-      width: 100%;
-      height: 100%;
-
-      border: 0;
-    }
-
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
-    .contact-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-      gap: 1rem;
-    }
-
-    .contact-card {
-      padding: 1.2rem;
-
-      text-align: center;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius-small);
-
-      background: var(--surface-soft);
-
-      transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
-    }
-
-    .contact-card:hover {
-      transform:
-        translateY(-4px);
-
-      border-color: #bfdbfe;
-
-      box-shadow:
-        var(--shadow-sm);
-    }
-
-    .contact-card strong {
-      display: block;
-
-      margin-bottom: 0.25rem;
-
-      color: var(--primary);
-
-      font-size: 0.92rem;
-    }
-
-    .contact-card span {
-      color: var(--blue);
-
-      font-size: 0.83rem;
-
-      word-break: break-word;
-    }
-
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
-
-    footer {
-      position: relative;
-
-      overflow: hidden;
-
-      padding: 2.4rem 1rem;
-
-      text-align: center;
-
-      color: #94a3b8;
-
-      background:
-        linear-gradient(
-          135deg,
-          #020617,
-          #0f172a
-        );
-    }
-
-    footer::before {
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      left: 50%;
-
-      width: 300px;
-      height: 1px;
-
-      transform:
-        translateX(-50%);
-
-      background:
-        linear-gradient(
-          90deg,
-          transparent,
-          #3b82f6,
-          #14b8a6,
-          transparent
-        );
-    }
-
-    footer strong {
-      color: #e2e8f0;
-    }
-
-    footer p {
-      font-size: 0.86rem;
-    }
-
-
-    /* =========================================================
-       SELECTION / SCROLLBAR
-       ========================================================= */
-
-    ::selection {
-      color: white;
-      background: #2563eb;
-    }
-
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #eef2f7;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      border:
-        2px solid #eef2f7;
-
-      border-radius: 999px;
-
-      background: #94a3b8;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #64748b;
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media (max-width: 1000px) {
-
-      .projects-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-      }
-
-      .tech-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-      }
-
-    }
-
-
-    @media (max-width: 768px) {
-
-      header {
-        min-height: auto;
-      }
-
-      .hero {
-        padding:
-          4rem 0;
-      }
-
-      main {
-        padding:
-          2rem 0 3rem;
-      }
-
-      .section-card {
-        padding: 1.6rem;
-      }
-
-      .projects-grid,
-      .skills-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .tech-grid {
-        grid-template-columns:
-          repeat(2, minmax(0, 1fr));
-      }
-
-      .pdf-container {
-        height: 560px;
-      }
-
-    }
-
-
-    @media (max-width: 560px) {
-
-      .hero h1 {
-        font-size: 2.45rem;
-      }
-
-      .hero-actions {
-        width: min(100%, 330px);
-
-        margin-left: auto;
-        margin-right: auto;
-
-        flex-direction: column;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      .section-card {
-        padding:
-          1.35rem 1.15rem;
-      }
-
-      .tech-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .tech-card {
-        min-height: 190px;
-      }
-
-      .cv-actions {
-        width: min(100%, 320px);
-
-        margin-left: auto;
-        margin-right: auto;
-
-        flex-direction: column;
-      }
-
-      .cv-actions .btn {
-        width: 100%;
-      }
-
-      .pdf-container {
-        height: 460px;
-      }
-
-    }
-
-
-    @media (prefers-reduced-motion: reduce) {
-
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-
-        transition-duration:
-          0.01ms !important;
-      }
-
-    }
-
-  </style>
 </head>
 
 
 <body>
 
 
-  <!-- =======================================================
-       HERO
-       ======================================================= -->
+  <!-- =========================================================
+       HEADER / NAVIGAZIONE
+       ========================================================= -->
 
-  <header>
+  <header class="site-header">
 
-    <div class="container hero">
+    <nav class="navbar">
 
-      <div class="hero-badge">
-        SOFTWARE DEVELOPMENT · WEB APPLICATIONS
+      <div class="container navbar-container">
+
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Andrea Russo - Home"
+        >
+          <span class="brand-symbol">&lt;/&gt;</span>
+
+          <span class="brand-name">
+            Andrea Russo
+          </span>
+        </a>
+
+
+        <div class="nav-links">
+
+          <a href="#chi-sono">
+            Chi sono
+          </a>
+
+          <a href="#progetti">
+            Progetti
+          </a>
+
+          <a href="#esperienza">
+            Esperienza
+          </a>
+
+          <a href="#competenze">
+            Competenze
+          </a>
+
+          <a href="#formazione">
+            Formazione
+          </a>
+
+          <a href="#cv">
+            CV
+          </a>
+
+          <a href="#contatti">
+            Contatti
+          </a>
+
+        </div>
+
       </div>
 
-      <h1>
-        Andrea Russo
-        <br>
-        <span>Software Developer</span>
-      </h1>
+    </nav>
 
-      <p class="hero-subtitle">
-        Interactive Web Projects & Development Portfolio
-      </p>
 
-      <p class="hero-description">
-        Software Developer and Computer Science student focused
-        on web application development, frontend technologies,
-        backend systems, databases and practical software solutions.
-      </p>
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
 
-      <div class="hero-actions">
+    <section
+      id="home"
+      class="hero"
+    >
 
-        <a
-          class="btn btn-light"
-          href="#projects"
-        >
-          View Projects
-        </a>
+      <div class="container hero-container">
 
-        <a
-          class="btn btn-glass"
-          href="https://github.com/AndreaRusso7899/Interactive-Web-Projects-Skill-Development"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Repository
-        </a>
+        <div class="hero-content">
 
-        <a
-          class="btn btn-glass"
-          href="info/CV-Andrea-Russo.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View CV
-        </a>
+          <div class="hero-badge">
+            SVILUPPATORE SOFTWARE · WEB DEVELOPER
+          </div>
+
+
+          <p class="hero-intro">
+            Ciao, sono
+          </p>
+
+
+          <h1>
+            Andrea Russo
+          </h1>
+
+
+          <h2 class="hero-role">
+            Sviluppatore Software
+          </h2>
+
+
+          <p class="hero-description">
+            Laureando in Informatica presso l'Università degli Studi
+            di Salerno con esperienza pratica nello sviluppo di
+            applicazioni web, sistemi gestionali, backend Python/Django,
+            frontend React/TypeScript, database MySQL, API REST
+            e configurazione di ambienti server FreeBSD.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="btn btn-primary"
+              href="#progetti"
+            >
+              Visualizza i progetti
+            </a>
+
+
+            <a
+              class="btn btn-secondary"
+              href="#esperienza"
+            >
+              Esperienza professionale
+            </a>
+
+
+            <a
+              class="btn btn-outline"
+              href="informazioni/CV%20di%20Andrea%20Russo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visualizza il CV
+            </a>
+
+          </div>
+
+
+          <div class="hero-social">
+
+            <a
+              href="https://github.com/AndreaRusso7899"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <span>•</span>
+
+            <a
+              href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <span>•</span>
+
+            <a href="mailto:andre.m3m0@gmail.com">
+              Email
+            </a>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
   </header>
 
 
 
-  <main class="container">
+  <!-- =========================================================
+       CONTENUTO PRINCIPALE
+       ========================================================= -->
+
+  <main>
 
 
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
-
-    <section class="section-card">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Portfolio
-        </span>
-
-        <h2 class="section-title">
-          About This Portfolio
-        </h2>
-
-      </div>
-
-      <p class="section-description">
-
-        This portfolio brings together interactive web projects
-        developed to strengthen practical front-end development
-        skills through direct implementation.
-
-        The projects focus on HTML, CSS and JavaScript concepts
-        including DOM manipulation, event handling, application
-        state, user interaction and dynamic interface updates.
-
-        I am a Software Developer and Computer Science student
-        with practical experience across frontend development,
-        backend development, databases and server environments.
-
-      </p>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         PROJECTS
-         ===================================================== -->
+    <!-- =======================================================
+         CHI SONO
+         ======================================================= -->
 
     <section
-      id="projects"
-      class="section-card"
+      id="chi-sono"
+      class="section section-about"
     >
 
-      <div class="section-heading">
+      <div class="container">
 
-        <span class="eyebrow">
-          Selected Work
-        </span>
+        <div class="section-header">
 
-        <h2 class="section-title">
-          Interactive Web Projects
-        </h2>
-
-        <p class="section-description">
-          Focused applications created to consolidate
-          browser-development concepts through practical
-          implementation.
-        </p>
-
-      </div>
-
-
-      <div class="projects-grid">
-
-
-        <!-- GUESS MY NUMBER -->
-
-        <article class="project-card">
-
-          <span class="project-number">
-            Project 01
+          <span class="section-kicker">
+            PROFILO
           </span>
 
-          <h3>
-            ❓ Guess My Number
-          </h3>
+          <h2>
+            Chi sono
+          </h2>
 
           <p>
-            Interactive browser-based guessing game in which the
-            player attempts to discover a randomly generated
-            secret number between 1 and 20. The interface provides
-            immediate feedback and dynamically manages the score
-            and game state.
+            Un percorso orientato allo sviluppo software,
+            all'apprendimento continuo e alla realizzazione
+            di soluzioni concrete.
           </p>
 
-          <div class="tags">
+        </div>
 
-            <span class="tag">HTML</span>
 
-            <span class="tag">CSS</span>
+        <div class="about-layout">
 
-            <span class="tag">JavaScript</span>
+          <div class="about-text">
 
-            <span class="tag">DOM</span>
+            <p>
+              Sono <strong>Andrea Russo</strong>, sviluppatore informatico
+              e laureando in Informatica presso
+              <strong>l'Università degli Studi di Salerno</strong>.
+            </p>
+
+            <p>
+              Sono una persona determinata e orientata al risultato,
+              con una forte capacità di concentrazione sia
+              nell'implementazione di soluzioni tecniche sia
+              nell'apprendimento di nuove competenze.
+            </p>
+
+            <p>
+              Il mio percorso comprende attività di sviluppo
+              <strong>frontend e backend</strong>, gestione di database,
+              sviluppo di API REST, realizzazione di applicativi gestionali,
+              generazione di documenti, elaborazione dei dati
+              e configurazione di ambienti server.
+            </p>
+
+            <p>
+              Il mio obiettivo professionale è continuare a crescere
+              come sviluppatore software, contribuendo a progetti
+              concreti e innovativi all'interno di un ambiente
+              professionale collaborativo.
+            </p>
 
           </div>
 
-          <a
-            class="project-link"
-            href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/guess-my-number/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </a>
 
-        </article>
+          <aside class="profile-card">
 
+            <div class="profile-item">
 
+              <span class="profile-label">
+                Professione
+              </span>
 
-        <!-- PIG GAME -->
+              <strong>
+                Sviluppatore Software
+              </strong>
 
-        <article class="project-card">
-
-          <span class="project-number">
-            Project 02
-          </span>
-
-          <h3>
-            🎲 Pig Game
-          </h3>
-
-          <p>
-            Two-player turn-based dice game built around
-            JavaScript application logic, score management,
-            player switching, random number generation and
-            interactive game-state handling.
-          </p>
-
-          <div class="tags">
-
-            <span class="tag">HTML</span>
-
-            <span class="tag">CSS</span>
-
-            <span class="tag">JavaScript</span>
-
-            <span class="tag">Game Logic</span>
-
-          </div>
-
-          <a
-            class="project-link"
-            href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/pig-game/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </a>
-
-        </article>
+            </div>
 
 
+            <div class="profile-item">
 
-        <!-- MODAL PROJECT -->
+              <span class="profile-label">
+                Formazione
+              </span>
 
-        <article class="project-card">
+              <strong>
+                Informatica
+              </strong>
 
-          <span class="project-number">
-            Project 03
-          </span>
+            </div>
 
-          <h3>
-            ✔ Modal Project
-          </h3>
 
-          <p>
-            User-interface project focused on modal windows,
-            overlays and event-driven interactions. JavaScript
-            controls interface state and dynamically opens and
-            closes UI components in response to user actions.
-          </p>
+            <div class="profile-item">
 
-          <div class="tags">
+              <span class="profile-label">
+                Università
+              </span>
 
-            <span class="tag">HTML</span>
+              <strong>
+                Università degli Studi di Salerno
+              </strong>
 
-            <span class="tag">CSS</span>
+            </div>
 
-            <span class="tag">JavaScript</span>
 
-            <span class="tag">UI</span>
+            <div class="profile-item">
 
-          </div>
+              <span class="profile-label">
+                Area
+              </span>
 
-          <a
-            class="project-link"
-            href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/progetto-modal/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Open Project
-          </a>
+              <strong>
+                Napoli / Torre Annunziata
+              </strong>
 
-        </article>
+            </div>
 
+
+            <div class="profile-item">
+
+              <span class="profile-label">
+                Lingue
+              </span>
+
+              <strong>
+                Italiano · Inglese B1
+              </strong>
+
+            </div>
+
+
+            <div class="profile-item">
+
+              <span class="profile-label">
+                Patenti
+              </span>
+
+              <strong>
+                A1 · B
+              </strong>
+
+            </div>
+
+          </aside>
+
+        </div>
 
       </div>
 
@@ -1737,67 +368,342 @@
 
 
 
-    <!-- =====================================================
-         SKILLS
-         ===================================================== -->
+    <!-- =======================================================
+         PROGETTI WEB
+         ======================================================= -->
 
-    <section class="section-card">
+    <section
+      id="progetti"
+      class="section section-projects"
+    >
 
-      <div class="section-heading">
+      <div class="container">
 
-        <span class="eyebrow">
-          Development
-        </span>
+        <div class="section-header">
 
-        <h2 class="section-title">
-          Skills Practiced
-        </h2>
+          <span class="section-kicker">
+            PORTFOLIO
+          </span>
 
-      </div>
+          <h2>
+            Progetti Web Interattivi
+          </h2>
 
+          <p>
+            Applicazioni sviluppate per consolidare HTML,
+            CSS e JavaScript attraverso l'implementazione
+            pratica di logica, interazione e gestione del DOM.
+          </p>
 
-      <div class="skills-grid">
-
-        <ul class="skill-list">
-
-          <li>
-            Semantic HTML structure and page organization
-          </li>
-
-          <li>
-            CSS styling and responsive interface design
-          </li>
-
-          <li>
-            JavaScript programming and application logic
-          </li>
-
-          <li>
-            DOM selection and manipulation
-          </li>
-
-        </ul>
+        </div>
 
 
-        <ul class="skill-list">
+        <div class="projects-grid">
 
-          <li>
-            Event-driven programming and event listeners
-          </li>
 
-          <li>
-            Dynamic interface and content updates
-          </li>
+          <!-- =================================================
+               PROGETTO 1
+               ================================================= -->
 
-          <li>
-            Application-state and score management
-          </li>
+          <article class="project-card">
 
-          <li>
-            GitHub Pages deployment and project organization
-          </li>
+            <div class="project-top">
 
-        </ul>
+              <span class="project-number">
+                01
+              </span>
+
+              <span class="project-status completed">
+                Completato
+              </span>
+
+            </div>
+
+
+            <div class="project-icon">
+              ❓
+            </div>
+
+
+            <h3>
+              Indovina il mio numero
+            </h3>
+
+
+            <p>
+              Gioco interattivo nel quale il giocatore deve
+              individuare un numero segreto generato casualmente
+              tra 1 e 20.
+            </p>
+
+
+            <p>
+              L'applicazione fornisce feedback dinamico,
+              gestisce punteggio e record e aggiorna
+              l'interfaccia in tempo reale tramite JavaScript.
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>HTML</span>
+
+              <span>CSS</span>
+
+              <span>JavaScript</span>
+
+              <span>DOM</span>
+
+              <span>Eventi</span>
+
+            </div>
+
+
+            <div class="project-features">
+
+              <ul>
+
+                <li>
+                  Manipolazione del DOM
+                </li>
+
+                <li>
+                  Gestione degli eventi
+                </li>
+
+                <li>
+                  Numeri casuali
+                </li>
+
+                <li>
+                  Gestione del punteggio
+                </li>
+
+                <li>
+                  Aggiornamenti dinamici
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <a
+              class="project-button"
+              href="./indovina%20il%20mio%20numero/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apri il progetto
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROGETTO 2
+               ================================================= -->
+
+          <article class="project-card">
+
+            <div class="project-top">
+
+              <span class="project-number">
+                02
+              </span>
+
+              <span class="project-status completed">
+                Completato
+              </span>
+
+            </div>
+
+
+            <div class="project-icon">
+              🎲
+            </div>
+
+
+            <h3>
+              Gioco del Maiale
+            </h3>
+
+
+            <p>
+              Gioco a turni per due giocatori basato sul
+              lancio di un dado, sulla gestione del rischio
+              e sull'accumulo del punteggio.
+            </p>
+
+
+            <p>
+              La logica JavaScript gestisce il giocatore attivo,
+              i punteggi temporanei, il punteggio globale,
+              le condizioni di vittoria e il riavvio della partita.
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>HTML</span>
+
+              <span>CSS</span>
+
+              <span>JavaScript</span>
+
+              <span>Game Logic</span>
+
+              <span>State</span>
+
+            </div>
+
+
+            <div class="project-features">
+
+              <ul>
+
+                <li>
+                  Logica applicativa
+                </li>
+
+                <li>
+                  Cambio giocatore
+                </li>
+
+                <li>
+                  Gestione dello stato
+                </li>
+
+                <li>
+                  Condizioni di vittoria
+                </li>
+
+                <li>
+                  Reset della partita
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <a
+              class="project-button"
+              href="./gioco%20del%20maiale/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apri il progetto
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+
+          <!-- =================================================
+               PROGETTO 3
+               ================================================= -->
+
+          <article class="project-card">
+
+            <div class="project-top">
+
+              <span class="project-number">
+                03
+              </span>
+
+              <span class="project-status completed">
+                Completato
+              </span>
+
+            </div>
+
+
+            <div class="project-icon">
+              ✔
+            </div>
+
+
+            <h3>
+              ✔ Progetto Modale
+            </h3>
+
+
+            <p>
+              Progetto dedicato alla creazione e gestione
+              di finestre modali interattive attraverso
+              HTML, CSS e JavaScript.
+            </p>
+
+
+            <p>
+              L'applicazione gestisce apertura e chiusura
+              delle finestre, overlay, classi CSS,
+              eventi del mouse ed eventi da tastiera.
+            </p>
+
+
+            <div class="project-tags">
+
+              <span>HTML</span>
+
+              <span>CSS</span>
+
+              <span>JavaScript</span>
+
+              <span>UI</span>
+
+              <span>Eventi</span>
+
+            </div>
+
+
+            <div class="project-features">
+
+              <ul>
+
+                <li>
+                  Finestre modali
+                </li>
+
+                <li>
+                  Overlay
+                </li>
+
+                <li>
+                  Event listener
+                </li>
+
+                <li>
+                  Eventi da tastiera
+                </li>
+
+                <li>
+                  Classi CSS dinamiche
+                </li>
+
+              </ul>
+
+            </div>
+
+
+            <a
+              class="project-button"
+              href="./ambiente-modale/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apri il progetto
+              <span>→</span>
+            </a>
+
+          </article>
+
+
+        </div>
 
       </div>
 
@@ -1805,395 +711,1523 @@
 
 
 
-    <!-- =====================================================
-         PROFESSIONAL BACKGROUND
-         ===================================================== -->
+    <!-- =======================================================
+         ESPERIENZA PROFESSIONALE
+         ======================================================= -->
 
-    <section class="section-card">
+    <section
+      id="esperienza"
+      class="section section-experience"
+    >
 
-      <div class="section-heading">
+      <div class="container">
 
-        <span class="eyebrow">
-          Experience
-        </span>
+        <div class="section-header">
 
-        <h2 class="section-title">
-          Professional Background
-        </h2>
+          <span class="section-kicker">
+            ESPERIENZA PROFESSIONALE
+          </span>
 
-        <p class="section-description">
-          Practical experience extends beyond the projects
-          presented in this repository and includes the
-          development and management of real web applications.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>
-          Comune di Torre Annunziata · Area Tecnica
-        </h3>
-
-        <span class="experience-role">
-          Software Developer / IT Technician
-        </span>
-
-        <p>
-          Development and management of web applications
-          supporting technical and administrative processes,
-          including Maximall, SUE / Registro Unico and two
-          Help Desk systems.
-
-          Activities included backend and frontend development,
-          MySQL database management, Excel data import,
-          data search and updates, exports, PDF generation,
-          REST APIs and application deployment.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>
-          Maximall
-        </h3>
-
-        <span class="experience-role">
-          Web Management Application
-        </span>
-
-        <p>
-          Web-based management system created for the
-          consultation, management and updating of information
-          relating to units, administrative practices, PDF
-          documents, assignments, leases and associated
-          workflows.
-
-          The application includes search functions,
-          dashboards, exports, user management, audit logs
-          and document uploads.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>
-          SUE / Registro Unico
-        </h3>
-
-        <span class="experience-role">
-          Digital Technical Procedures Management
-        </span>
-
-        <p>
-          Digital application developed to support building
-          procedure management with search, consultation,
-          creation, updates, Excel import, PDF generation
-          and modification tracking.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>
-          Help Desk Systems
-        </h3>
-
-        <span class="experience-role">
-          Python / Django · REST API · MySQL · React / TypeScript
-        </span>
-
-        <p>
-          Development of Help Desk platforms for managing
-          support requests, tickets, users, offices,
-          notifications, knowledge-base content and reports.
-
-          The systems use a Python/Django backend, REST APIs,
-          MySQL databases and React/TypeScript frontend modules.
-        </p>
-
-      </div>
-
-
-      <div class="experience-item">
-
-        <h3>
-          Server & Deployment
-        </h3>
-
-        <span class="experience-role">
-          FreeBSD Environment
-        </span>
-
-        <p>
-          Creation, configuration and management of a small
-          FreeBSD-based server environment, including runtime
-          setup, application services, automatic startup,
-          deployment and basic operational monitoring.
-        </p>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         TECHNOLOGIES
-         ===================================================== -->
-
-    <section class="section-card">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Technical Stack
-        </span>
-
-        <h2 class="section-title">
-          Technology Highlights
-        </h2>
-
-      </div>
-
-
-      <div class="tech-grid">
-
-
-        <!-- PYTHON -->
-
-        <div class="tech-card">
-
-          <div class="tech-logo-wrap">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              alt="Python"
-            >
-
-          </div>
-
-          <h3>
-            Python / Django
-          </h3>
+          <h2>
+            Sviluppo software in contesto reale
+          </h2>
 
           <p>
-            Backend development,
-            application logic and
-            REST API development.
+            Esperienza nella realizzazione e gestione
+            di applicazioni utilizzate a supporto
+            delle attività tecnico-amministrative.
           </p>
 
         </div>
 
 
+        <div class="experience-main-card">
 
-        <!-- REACT -->
+          <div class="experience-heading">
 
-        <div class="tech-card">
+            <div>
 
-          <div class="tech-logo-wrap">
+              <span class="experience-type">
+                Esperienza professionale
+              </span>
 
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-              alt="React"
-            >
+              <h3>
+                Comune di Torre Annunziata
+              </h3>
+
+              <h4>
+                Area Tecnica
+              </h4>
+
+            </div>
+
+
+            <span class="experience-position">
+              Tecnico informatico · Sviluppatore software
+            </span>
 
           </div>
 
-          <h3>
-            React / TypeScript
-          </h3>
 
           <p>
-            Component-based frontend
-            development and structured
-            web interfaces.
+            Presso l'Area Tecnica del Comune di Torre Annunziata
+            ho realizzato e gestito diversi applicativi web
+            a supporto delle attività tecnico-amministrative,
+            occupandomi sia dello sviluppo software
+            sia della configurazione dell'ambiente server.
           </p>
+
+
+          <div class="experience-skills">
+
+            <span>Python</span>
+
+            <span>Django</span>
+
+            <span>HTML</span>
+
+            <span>CSS</span>
+
+            <span>JavaScript</span>
+
+            <span>React</span>
+
+            <span>TypeScript</span>
+
+            <span>MySQL</span>
+
+            <span>API REST</span>
+
+            <span>FreeBSD</span>
+
+          </div>
 
         </div>
 
 
 
-        <!-- MYSQL -->
+        <!-- ===================================================
+             MAXIMALL
+             =================================================== -->
 
-        <div class="tech-card">
+        <article class="professional-project">
 
-          <div class="tech-logo-wrap">
-
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-              alt="MySQL"
-            >
-
+          <div class="professional-project-number">
+            01
           </div>
 
-          <h3>
-            SQL / MySQL
-          </h3>
 
-          <p>
-            Database management,
-            queries and structured
-            application data operations.
-          </p>
+          <div class="professional-project-content">
 
-        </div>
+            <h3>
+              Maximall
+            </h3>
 
+            <span class="professional-project-type">
+              Gestionale web
+            </span>
 
 
-        <!-- FREEBSD -->
+            <p>
+              Applicativo sviluppato per la consultazione,
+              gestione e aggiornamento delle informazioni
+              relative alle unità, alle pratiche,
+              ai documenti PDF, agli affidamenti,
+              alle locazioni e ai flussi di lavoro collegati.
+            </p>
 
-        <div class="tech-card">
 
-          <div class="tech-logo-wrap">
+            <div class="feature-grid">
 
-            <div
-              class="freebsd-mark"
-              aria-label="FreeBSD"
-              title="FreeBSD"
-            >
+              <span>
+                Ricerca dati
+              </span>
 
-              <div class="freebsd-eye"></div>
+              <span>
+                Dashboard
+              </span>
+
+              <span>
+                Gestione utenti
+              </span>
+
+              <span>
+                Audit log
+              </span>
+
+              <span>
+                Esportazione dati
+              </span>
+
+              <span>
+                Caricamento documentale
+              </span>
 
             </div>
 
           </div>
 
-          <h3>
-            FreeBSD
-          </h3>
+        </article>
+
+
+
+        <!-- ===================================================
+             SUE
+             =================================================== -->
+
+        <article class="professional-project">
+
+          <div class="professional-project-number">
+            02
+          </div>
+
+
+          <div class="professional-project-content">
+
+            <h3>
+              SUE / Registro Unico
+            </h3>
+
+            <span class="professional-project-type">
+              Gestione digitale delle pratiche edilizie
+            </span>
+
+
+            <p>
+              Sistema realizzato per supportare la gestione
+              digitale delle pratiche edilizie attraverso
+              funzioni di ricerca, consultazione,
+              inserimento e aggiornamento.
+            </p>
+
+
+            <div class="feature-grid">
+
+              <span>
+                Ricerca pratiche
+              </span>
+
+              <span>
+                Inserimento dati
+              </span>
+
+              <span>
+                Aggiornamento
+              </span>
+
+              <span>
+                Importazione Excel
+              </span>
+
+              <span>
+                Generazione PDF
+              </span>
+
+              <span>
+                Tracciamento modifiche
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===================================================
+             HELP DESK
+             =================================================== -->
+
+        <article class="professional-project">
+
+          <div class="professional-project-number">
+            03
+          </div>
+
+
+          <div class="professional-project-content">
+
+            <h3>
+              Sistemi Help Desk
+            </h3>
+
+            <span class="professional-project-type">
+              Python / Django · API REST · MySQL · React / TypeScript
+            </span>
+
+
+            <p>
+              Sviluppo di due sistemi Help Desk
+              dedicati alla gestione delle richieste
+              di assistenza e dei flussi operativi interni.
+            </p>
+
+
+            <div class="feature-grid">
+
+              <span>
+                Ticket
+              </span>
+
+              <span>
+                Utenti
+              </span>
+
+              <span>
+                Uffici
+              </span>
+
+              <span>
+                Notifiche
+              </span>
+
+              <span>
+                Knowledge Base
+              </span>
+
+              <span>
+                Report
+              </span>
+
+            </div>
+
+
+            <div class="architecture">
+
+              <div class="architecture-node">
+
+                <strong>
+                  Frontend
+                </strong>
+
+                <span>
+                  React / TypeScript
+                </span>
+
+              </div>
+
+
+              <span class="architecture-arrow">
+                ↕
+              </span>
+
+
+              <div class="architecture-node">
+
+                <strong>
+                  API
+                </strong>
+
+                <span>
+                  REST
+                </span>
+
+              </div>
+
+
+              <span class="architecture-arrow">
+                ↕
+              </span>
+
+
+              <div class="architecture-node">
+
+                <strong>
+                  Backend
+                </strong>
+
+                <span>
+                  Python / Django
+                </span>
+
+              </div>
+
+
+              <span class="architecture-arrow">
+                ↕
+              </span>
+
+
+              <div class="architecture-node">
+
+                <strong>
+                  Database
+                </strong>
+
+                <span>
+                  MySQL
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ===================================================
+             FREEBSD
+             =================================================== -->
+
+        <article class="professional-project">
+
+          <div class="professional-project-number">
+            04
+          </div>
+
+
+          <div class="professional-project-content">
+
+            <h3>
+              Server FreeBSD
+            </h3>
+
+            <span class="professional-project-type">
+              Configurazione · Deploy · Gestione ambiente
+            </span>
+
+
+            <div class="freebsd-project">
+
+              <div class="freebsd-logo-box">
+
+                <img
+                  src="freebsd.png"
+                  alt="Logo FreeBSD"
+                >
+
+              </div>
+
+
+              <div>
+
+                <p>
+                  Mi sono occupato della creazione,
+                  manutenzione e gestione di un piccolo
+                  server basato su FreeBSD.
+                </p>
+
+                <p>
+                  Le attività hanno compreso configurazione
+                  dell'ambiente di esecuzione, servizi applicativi,
+                  avvio automatico, deploy dei progetti
+                  e monitoraggio operativo di base.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+              <span>
+                Configurazione ambiente
+              </span>
+
+              <span>
+                Servizi applicativi
+              </span>
+
+              <span>
+                Avvio automatico
+              </span>
+
+              <span>
+                Deploy
+              </span>
+
+              <span>
+                Hosting applicazioni
+              </span>
+
+              <span>
+                Monitoraggio
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         COMPETENZE TECNICHE
+         ======================================================= -->
+
+    <section
+      id="competenze"
+      class="section section-skills"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            STACK TECNOLOGICO
+          </span>
+
+          <h2>
+            Competenze tecniche
+          </h2>
 
           <p>
-            Server configuration,
-            deployment and application
-            environment management.
+            Tecnologie utilizzate durante il percorso
+            universitario, i progetti personali
+            e le esperienze professionali.
           </p>
 
         </div>
 
 
-      </div>
-
-    </section>
+        <div class="skills-categories">
 
 
+          <!-- PROGRAMMAZIONE -->
 
-    <!-- =====================================================
-         ADDITIONAL TECHNOLOGIES
-         ===================================================== -->
+          <article class="skill-category">
 
-    <section class="section-card">
+            <h3>
+              Linguaggi di programmazione
+            </h3>
 
-      <div class="section-heading">
+            <div class="technology-list">
 
-        <span class="eyebrow">
-          Additional Skills
-        </span>
+              <span>
+                Python
+              </span>
 
-        <h2 class="section-title">
-          Broader Technical Background
-        </h2>
+              <span>
+                JavaScript
+              </span>
 
-      </div>
+              <span>
+                TypeScript
+              </span>
 
+              <span>
+                Java
+              </span>
 
-      <div class="skills-grid">
+              <span>
+                C
+              </span>
 
-        <ul class="skill-list">
+              <span>
+                C++
+              </span>
 
-          <li>
-            JavaScript, Java, HTML and CSS
-          </li>
+              <span>
+                C#
+              </span>
 
-          <li>
-            C and C++
-          </li>
+            </div>
 
-          <li>
-            C# scripting with Unity
-          </li>
-
-          <li>
-            Node.js fundamentals
-          </li>
-
-        </ul>
-
-
-        <ul class="skill-list">
-
-          <li>
-            Android Studio
-          </li>
-
-          <li>
-            Electron and desktop builds
-          </li>
-
-          <li>
-            SQLite and JSON
-          </li>
-
-          <li>
-            React and Vite configuration
-          </li>
-
-        </ul>
-
-      </div>
-
-    </section>
+          </article>
 
 
 
-    <!-- =====================================================
-         EDUCATION
-         ===================================================== -->
+          <!-- FRONTEND -->
 
-    <section class="section-card">
+          <article class="skill-category">
 
-      <div class="section-heading">
+            <h3>
+              Sviluppo Frontend
+            </h3>
 
-        <span class="eyebrow">
-          Education
-        </span>
+            <div class="technology-list">
 
-        <h2 class="section-title">
-          Academic Background
-        </h2>
+              <span>
+                HTML
+              </span>
 
-      </div>
+              <span>
+                CSS
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                React
+              </span>
+
+              <span>
+                TypeScript
+              </span>
+
+              <span>
+                Vite
+              </span>
+
+            </div>
+
+          </article>
 
 
-      <div class="education-box">
 
-        <div class="education-icon">
-          🎓
+          <!-- BACKEND -->
+
+          <article class="skill-category">
+
+            <h3>
+              Sviluppo Backend
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                Python
+              </span>
+
+              <span>
+                Django
+              </span>
+
+              <span>
+                API REST
+              </span>
+
+              <span>
+                Node.js
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- DATABASE -->
+
+          <article class="skill-category">
+
+            <h3>
+              Database
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                SQL
+              </span>
+
+              <span>
+                MySQL
+              </span>
+
+              <span>
+                SQLite
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- MOBILE -->
+
+          <article class="skill-category">
+
+            <h3>
+              Sviluppo Mobile
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                Android Studio
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- GAME DEVELOPMENT -->
+
+          <article class="skill-category">
+
+            <h3>
+              Unity e sviluppo interattivo
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                Unity
+              </span>
+
+              <span>
+                C#
+              </span>
+
+              <span>
+                Scripting
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- DESKTOP -->
+
+          <article class="skill-category">
+
+            <h3>
+              Applicazioni Desktop
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                Electron
+              </span>
+
+              <span>
+                React
+              </span>
+
+              <span>
+                JavaScript
+              </span>
+
+              <span>
+                JSON
+              </span>
+
+              <span>
+                SQLite
+              </span>
+
+              <span>
+                Vite
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- SERVER -->
+
+          <article class="skill-category">
+
+            <h3>
+              Server e distribuzione
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                FreeBSD
+              </span>
+
+              <span>
+                Deploy
+              </span>
+
+              <span>
+                Configurazione servizi
+              </span>
+
+              <span>
+                Monitoraggio
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- IDE -->
+
+          <article class="skill-category">
+
+            <h3>
+              Ambienti di sviluppo
+            </h3>
+
+            <div class="technology-list">
+
+              <span>
+                IntelliJ
+              </span>
+
+              <span>
+                Visual Studio
+              </span>
+
+              <span>
+                Eclipse
+              </span>
+
+              <span>
+                NetBeans
+              </span>
+
+              <span>
+                Dev-C++
+              </span>
+
+              <span>
+                Android Studio
+              </span>
+
+            </div>
+
+          </article>
+
+
         </div>
 
-        <div>
+      </div>
 
-          <h3>
-            University of Salerno
-          </h3>
+    </section>
 
-          <strong>
-            Bachelor's Degree in Computer Science — Ongoing
-          </strong>
+
+
+    <!-- =======================================================
+         TECNOLOGIE IN EVIDENZA
+         ======================================================= -->
+
+    <section class="section section-technologies">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            TECNOLOGIE
+          </span>
+
+          <h2>
+            Tecnologie principali
+          </h2>
+
+        </div>
+
+
+        <div class="tech-grid">
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt="Python"
+              >
+
+            </div>
+
+            <h3>
+              Python
+            </h3>
+
+            <p>
+              Backend, elaborazione dati
+              e logica applicativa.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                alt="Django"
+              >
+
+            </div>
+
+            <h3>
+              Django
+            </h3>
+
+            <p>
+              Backend web,
+              API e applicazioni gestionali.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt="JavaScript"
+              >
+
+            </div>
+
+            <h3>
+              JavaScript
+            </h3>
+
+            <p>
+              Interattività,
+              DOM e logica frontend.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React"
+              >
+
+            </div>
+
+            <h3>
+              React
+            </h3>
+
+            <p>
+              Interfacce moderne
+              basate su componenti.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              >
+
+            </div>
+
+            <h3>
+              TypeScript
+            </h3>
+
+            <p>
+              Sviluppo frontend
+              strutturato e tipizzato.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt="MySQL"
+              >
+
+            </div>
+
+            <h3>
+              MySQL
+            </h3>
+
+            <p>
+              Gestione,
+              interrogazione e archiviazione dati.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt="HTML5"
+              >
+
+            </div>
+
+            <h3>
+              HTML5
+            </h3>
+
+            <p>
+              Struttura semantica
+              delle applicazioni web.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt="CSS3"
+              >
+
+            </div>
+
+            <h3>
+              CSS3
+            </h3>
+
+            <p>
+              Styling,
+              layout e responsive design.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt="Java"
+              >
+
+            </div>
+
+            <h3>
+              Java
+            </h3>
+
+            <p>
+              Programmazione
+              orientata agli oggetti.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                alt="C++"
+              >
+
+            </div>
+
+            <h3>
+              C / C++
+            </h3>
+
+            <p>
+              Programmazione
+              e fondamenti informatici.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo">
+
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg"
+                alt="Electron"
+              >
+
+            </div>
+
+            <h3>
+              Electron
+            </h3>
+
+            <p>
+              Applicazioni desktop
+              multipiattaforma.
+            </p>
+
+          </article>
+
+
+
+          <article class="tech-card">
+
+            <div class="tech-logo freebsd-tech-logo">
+
+              <img
+                src="freebsd.png"
+                alt="FreeBSD"
+              >
+
+            </div>
+
+            <h3>
+              FreeBSD
+            </h3>
+
+            <p>
+              Ambiente server,
+              deployment e gestione servizi.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         FORMAZIONE
+         ======================================================= -->
+
+    <section
+      id="formazione"
+      class="section section-education"
+    >
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            FORMAZIONE
+          </span>
+
+          <h2>
+            Percorso accademico
+          </h2>
+
+        </div>
+
+
+        <article class="education-card">
+
+          <div class="education-icon">
+            🎓
+          </div>
+
+
+          <div class="education-content">
+
+            <span class="education-status">
+              Percorso in corso
+            </span>
+
+
+            <h3>
+              Laurea in Informatica
+            </h3>
+
+
+            <h4>
+              Università degli Studi di Salerno
+            </h4>
+
+
+            <p>
+              Percorso universitario in Informatica
+              orientato allo sviluppo di competenze
+              nella programmazione, algoritmi,
+              sviluppo software, sistemi informatici,
+              database e tecnologie web.
+            </p>
+
+
+            <span class="education-level">
+              Livello EQF 6
+            </span>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         COMPETENZE PERSONALI
+         ======================================================= -->
+
+    <section class="section section-soft-skills">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            SOFT SKILLS
+          </span>
+
+          <h2>
+            Competenze personali
+          </h2>
+
+        </div>
+
+
+        <div class="soft-skills-grid">
+
+          <article class="soft-skill-card">
+
+            <span class="soft-skill-icon">
+              🤝
+            </span>
+
+            <h3>
+              Lavoro di squadra
+            </h3>
+
+            <p>
+              Capacità di collaborare con altre persone
+              maturata attraverso progetti universitari
+              e attività professionali.
+            </p>
+
+          </article>
+
+
+
+          <article class="soft-skill-card">
+
+            <span class="soft-skill-icon">
+              🎯
+            </span>
+
+            <h3>
+              Orientamento al risultato
+            </h3>
+
+            <p>
+              Approccio focalizzato sul raggiungimento
+              degli obiettivi e sulla ricerca
+              di soluzioni concrete.
+            </p>
+
+          </article>
+
+
+
+          <article class="soft-skill-card">
+
+            <span class="soft-skill-icon">
+              🧠
+            </span>
+
+            <h3>
+              Apprendimento continuo
+            </h3>
+
+            <p>
+              Interesse costante per nuove tecnologie,
+              metodologie e strumenti
+              di sviluppo software.
+            </p>
+
+          </article>
+
+
+
+          <article class="soft-skill-card">
+
+            <span class="soft-skill-icon">
+              👂
+            </span>
+
+            <h3>
+              Ascolto e collaborazione
+            </h3>
+
+            <p>
+              Buone capacità di ascolto ed empatia,
+              utili nella collaborazione
+              con colleghi e utenti.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         LINGUE
+         ======================================================= -->
+
+    <section class="section section-languages">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            LINGUE
+          </span>
+
+          <h2>
+            Competenze linguistiche
+          </h2>
+
+        </div>
+
+
+        <div class="languages-grid">
+
+          <article class="language-card">
+
+            <span class="language-flag">
+              🇮🇹
+            </span>
+
+            <div>
+
+              <h3>
+                Italiano
+              </h3>
+
+              <strong>
+                Lingua madre
+              </strong>
+
+            </div>
+
+          </article>
+
+
+          <article class="language-card">
+
+            <span class="language-flag">
+              🇬🇧
+            </span>
+
+            <div>
+
+              <h3>
+                Inglese
+              </h3>
+
+              <strong>
+                Livello B1
+              </strong>
+
+              <p>
+                Ascolto · Lettura · Scrittura ·
+                Produzione orale · Interazione orale
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         HOBBY
+         ======================================================= -->
+
+    <section class="section section-interests">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <span class="section-kicker">
+            INTERESSI
+          </span>
+
+          <h2>
+            Hobby e interessi
+          </h2>
+
+        </div>
+
+
+        <div class="interests-grid">
+
+
+          <article class="interest-card">
+
+            <span class="interest-icon">
+              ⚽
+            </span>
+
+            <h3>
+              Calcio
+            </h3>
+
+            <p>
+              Interesse che contribuisce
+              a mantenere uno stile di vita
+              attivo e competitivo.
+            </p>
+
+          </article>
+
+
+
+          <article class="interest-card">
+
+            <span class="interest-icon">
+              📷
+            </span>
+
+            <h3>
+              Fotografia
+            </h3>
+
+            <p>
+              Passione attraverso cui
+              esprimere creatività
+              e attenzione ai dettagli.
+            </p>
+
+          </article>
+
+
+
+          <article class="interest-card">
+
+            <span class="interest-icon">
+              🏎️
+            </span>
+
+            <h3>
+              Motori
+            </h3>
+
+            <p>
+              Interesse per il settore,
+              le tecnologie e
+              l'innovazione applicata.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         OBIETTIVI PROFESSIONALI
+         ======================================================= -->
+
+    <section class="section section-objectives">
+
+      <div class="container">
+
+        <div class="objectives-card">
+
+          <span class="section-kicker">
+            OBIETTIVI PROFESSIONALI
+          </span>
+
+
+          <h2>
+            Il prossimo passo
+          </h2>
+
 
           <p>
-            Academic training in computer science combined
-            with practical software-development experience
-            across programming, databases, web technologies
-            and software-oriented problem solving.
+            Sono interessato a opportunità professionali
+            che mi permettano di mettere in pratica
+            le conoscenze acquisite, contribuire
+            a progetti software reali e continuare
+            a crescere professionalmente.
           </p>
+
+
+          <div class="roles">
+
+            <span>
+              Sviluppatore Software
+            </span>
+
+            <span>
+              Backend Developer
+            </span>
+
+            <span>
+              Frontend Developer
+            </span>
+
+            <span>
+              Full Stack Developer
+            </span>
+
+            <span>
+              Python Developer
+            </span>
+
+            <span>
+              Web Developer
+            </span>
+
+          </div>
 
         </div>
 
@@ -2203,66 +2237,101 @@
 
 
 
-    <!-- =====================================================
-         CV
-         ONLY THE NEW CV IS USED
-         ===================================================== -->
+    <!-- =======================================================
+         CURRICULUM VITAE
+         ======================================================= -->
 
     <section
       id="cv"
-      class="section-card cv-section"
+      class="section section-cv"
     >
 
-      <div class="section-heading">
+      <div class="container">
 
-        <span class="eyebrow">
-          Curriculum Vitae
-        </span>
+        <div class="section-header">
 
-        <h2 class="section-title">
-          Professional Profile
-        </h2>
+          <span class="section-kicker">
+            CURRICULUM VITAE
+          </span>
 
-      </div>
+          <h2>
+            Curriculum Vitae
+          </h2>
 
+          <p>
+            Consulta il Curriculum Vitae completo
+            per approfondire formazione,
+            competenze ed esperienza professionale.
+          </p>
 
-      <p class="cv-intro">
-        View my updated curriculum vitae for complete
-        information about my education, professional
-        experience and technical skills.
-      </p>
-
-
-      <div class="cv-actions">
-
-        <a
-          class="btn btn-blue"
-          href="info/CV-Andrea-Russo.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Updated CV
-        </a>
+        </div>
 
 
-        <a
-          class="btn btn-secondary"
-          href="info/CV-Andrea-Russo.pdf"
-          download="CV-Andrea-Russo.pdf"
-        >
-          Download Updated PDF
-        </a>
+        <div class="cv-card">
 
-      </div>
+          <div class="cv-icon">
+            📄
+          </div>
 
 
-      <div class="pdf-container">
+          <div class="cv-info">
 
-        <iframe
-          src="info/CV-Andrea-Russo.pdf#view=FitH"
-          title="Updated Curriculum Vitae - Andrea Russo"
-        >
-        </iframe>
+            <h3>
+              CV di Andrea Russo
+            </h3>
+
+            <p>
+              Curriculum Vitae aggiornato
+              in formato PDF.
+            </p>
+
+          </div>
+
+
+          <div class="cv-buttons">
+
+
+            <!--
+              PDF CORRETTO:
+              cartella: informazioni
+              file: CV di Andrea Russo.pdf
+            -->
+
+            <a
+              class="btn btn-primary"
+              href="informazioni/CV%20di%20Andrea%20Russo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visualizza CV
+            </a>
+
+
+            <a
+              class="btn btn-download"
+              href="informazioni/CV%20di%20Andrea%20Russo.pdf"
+              download="CV di Andrea Russo.pdf"
+            >
+              Scarica PDF
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ANTEPRIMA DEL CV CORRETTO -->
+
+        <div class="cv-preview">
+
+          <iframe
+            src="informazioni/CV%20di%20Andrea%20Russo.pdf#view=FitH"
+            title="Curriculum Vitae di Andrea Russo"
+            loading="lazy"
+          >
+          </iframe>
+
+        </div>
 
       </div>
 
@@ -2270,81 +2339,119 @@
 
 
 
-    <!-- =====================================================
-         CONTACT
-         ===================================================== -->
+    <!-- =======================================================
+         CONTATTI
+         ======================================================= -->
 
-    <section class="section-card">
+    <section
+      id="contatti"
+      class="section section-contact"
+    >
 
-      <div class="section-heading">
+      <div class="container">
 
-        <span class="eyebrow">
-          Contact
-        </span>
+        <div class="section-header">
 
-        <h2 class="section-title">
-          Get in Touch
-        </h2>
-
-      </div>
-
-
-      <div class="contact-grid">
-
-
-        <a
-          class="contact-card"
-          href="mailto:andre.m3m0@gmail.com"
-        >
-
-          <strong>
-            Email
-          </strong>
-
-          <span>
-            andre.m3m0@gmail.com
+          <span class="section-kicker">
+            CONTATTI
           </span>
 
-        </a>
+          <h2>
+            Entriamo in contatto
+          </h2>
+
+          <p>
+            Per opportunità professionali,
+            collaborazioni o informazioni
+            sui miei progetti puoi contattarmi
+            attraverso i canali seguenti.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <a
+            class="contact-card"
+            href="mailto:andre.m3m0@gmail.com"
+          >
+
+            <span class="contact-icon">
+              ✉️
+            </span>
+
+            <div>
+
+              <span class="contact-label">
+                Email
+              </span>
+
+              <strong>
+                andre.m3m0@gmail.com
+              </strong>
+
+            </div>
+
+          </a>
 
 
 
-        <a
-          class="contact-card"
-          href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <a
+            class="contact-card"
+            href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
 
-          <strong>
-            LinkedIn
-          </strong>
+            <span class="contact-icon">
+              💼
+            </span>
 
-          <span>
-            Andrea Russo
-          </span>
+            <div>
 
-        </a>
+              <span class="contact-label">
+                LinkedIn
+              </span>
+
+              <strong>
+                Andrea Russo
+              </strong>
+
+            </div>
+
+          </a>
 
 
 
-        <a
-          class="contact-card"
-          href="https://github.com/AndreaRusso7899"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <a
+            class="contact-card"
+            href="https://github.com/AndreaRusso7899"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
 
-          <strong>
-            GitHub
-          </strong>
+            <span class="contact-icon">
+              💻
+            </span>
 
-          <span>
-            AndreaRusso7899
-          </span>
+            <div>
 
-        </a>
+              <span class="contact-label">
+                GitHub
+              </span>
 
+              <strong>
+                AndreaRusso7899
+              </strong>
+
+            </div>
+
+          </a>
+
+
+        </div>
 
       </div>
 
@@ -2355,27 +2462,76 @@
 
 
 
-  <!-- =======================================================
+  <!-- =========================================================
        FOOTER
-       ======================================================= -->
+       ========================================================= -->
 
-  <footer>
+  <footer class="footer">
 
-    <p>
-      © <span id="currentYear"></span>
-      <strong>Andrea Russo</strong>
-      · Software Developer · Web Development Portfolio
-    </p>
+    <div class="container footer-container">
+
+      <div>
+
+        <strong>
+          Andrea Russo
+        </strong>
+
+        <p>
+          Sviluppatore Software · Portfolio professionale
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home">
+          Torna su
+        </a>
+
+        <a
+          href="https://github.com/AndreaRusso7899"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="currentYear"></span>
+        Andrea Russo. Tutti i diritti riservati.
+      </p>
+
+    </div>
 
   </footer>
 
 
 
-  <!-- =======================================================
+  <!-- =========================================================
        JAVASCRIPT
-       ======================================================= -->
+       ========================================================= -->
 
   <script>
+
+    /*
+      Aggiornamento automatico dell'anno nel footer.
+    */
 
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
