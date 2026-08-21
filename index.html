@@ -2,26 +2,46 @@
 <html lang="it">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Portfolio professionale di Andrea Russo, sviluppatore software e laureando in Informatica. Progetti, esperienza professionale, competenze tecniche e Curriculum Vitae."
+    content="Portfolio professionale di Andrea Russo, sviluppatore software e laureando in Informatica. Progetti web, esperienza professionale, competenze tecniche e Curriculum Vitae."
   >
 
-  <meta name="author" content="Andrea Russo">
-  <meta name="theme-color" content="#0f172a">
+  <meta
+    name="keywords"
+    content="Andrea Russo, sviluppatore software, web developer, Python, Django, React, TypeScript, JavaScript, MySQL, HTML, CSS, FreeBSD"
+  >
+
+  <meta
+    name="author"
+    content="Andrea Russo"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0f172a"
+  >
 
   <title>Andrea Russo | Sviluppatore Software</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
 
   <style>
+
     /* =========================================================
-       FIX STRUTTURA PAGINA
-       Ordine obbligatorio:
-       HEADER -> CONTENUTO -> FOOTER
+       STRUTTURA GENERALE
        ========================================================= */
 
     html {
@@ -30,9 +50,7 @@
 
     body {
       margin: 0 !important;
-      padding: 0 !important;
       min-height: 100vh !important;
-      width: 100% !important;
 
       display: flex !important;
       flex-direction: column !important;
@@ -42,60 +60,32 @@
 
     body > header.site-header {
       order: 1 !important;
-
       position: relative !important;
-
-      top: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      left: auto !important;
-
-      inset: auto !important;
-
       width: 100% !important;
-
       transform: none !important;
     }
 
     body > main {
       order: 2 !important;
-
       position: relative !important;
-
-      top: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      left: auto !important;
-
-      inset: auto !important;
-
       width: 100% !important;
-
       transform: none !important;
     }
 
     body > footer.footer {
       order: 3 !important;
-
       position: relative !important;
-
-      top: auto !important;
-      right: auto !important;
-      bottom: auto !important;
-      left: auto !important;
-
-      inset: auto !important;
-
       width: 100% !important;
-
       transform: none !important;
     }
 
+
     /* =========================================================
-       PULSANTE TORNA SU
+       PULSANTE TORNA IN ALTO
        ========================================================= */
 
     .back-to-top {
+
       position: fixed !important;
 
       right: 28px !important;
@@ -110,16 +100,17 @@
 
       z-index: 99999;
 
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 50%;
 
-      background: linear-gradient(
-        135deg,
-        #2563eb,
-        #0f766e
-      );
+      background:
+        linear-gradient(
+          135deg,
+          #2563eb,
+          #0f766e
+        );
 
-      color: #ffffff;
+      color: white;
 
       font-size: 1.55rem;
       font-weight: 800;
@@ -127,7 +118,7 @@
       cursor: pointer;
 
       box-shadow:
-        0 12px 30px rgba(15, 23, 42, 0.28);
+        0 12px 30px rgba(15,23,42,0.28);
 
       opacity: 0;
       visibility: hidden;
@@ -135,28 +126,35 @@
       transform: translateY(15px);
 
       transition:
-        opacity 0.25s ease,
-        visibility 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        opacity .25s ease,
+        visibility .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
     }
 
+
     .back-to-top.show {
+
       opacity: 1;
       visibility: visible;
 
       transform: translateY(0);
     }
 
+
     .back-to-top:hover {
+
       transform: translateY(-4px);
 
       box-shadow:
-        0 18px 40px rgba(37, 99, 235, 0.34);
+        0 18px 40px rgba(37,99,235,.34);
     }
 
-    @media (max-width: 650px) {
+
+    @media (max-width:650px) {
+
       .back-to-top {
+
         right: 18px !important;
         bottom: 18px !important;
 
@@ -165,32 +163,52 @@
 
         font-size: 1.3rem;
       }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
 
+
   <!-- =========================================================
        HEADER
        ========================================================= -->
 
-  <header id="home" class="site-header">
+  <header
+    id="home"
+    class="site-header"
+  >
 
-    <!-- NAVBAR -->
+
+    <!-- =======================================================
+         NAVBAR
+         ======================================================= -->
+
     <nav class="navbar">
 
       <div class="container navbar-container">
+
 
         <a
           class="brand"
           href="#home"
           aria-label="Andrea Russo - Torna all'inizio"
         >
-          <span class="brand-symbol">&lt;/&gt;</span>
-          <span class="brand-name">Andrea Russo</span>
+
+          <span class="brand-symbol">
+            &lt;/&gt;
+          </span>
+
+          <span class="brand-name">
+            Andrea Russo
+          </span>
+
         </a>
+
 
 
         <div class="nav-links">
@@ -215,10 +233,9 @@
             Formazione
           </a>
 
-          <!--
-            IL CV NON PORTA A UNA SEZIONE INTERNA.
-            APRE DIRETTAMENTE IL PDF.
-          -->
+
+          <!-- CV APERTO DIRETTAMENTE COME PDF -->
+
           <a
             href="./informazioni/CV-Andrea-Russo.pdf"
             target="_blank"
@@ -227,15 +244,18 @@
             CV
           </a>
 
+
           <a href="#contatti">
             Contatti
           </a>
 
         </div>
 
+
       </div>
 
     </nav>
+
 
 
     <!-- =======================================================
@@ -248,32 +268,44 @@
 
         <div class="hero-content">
 
+
           <div class="hero-badge">
             SVILUPPATORE SOFTWARE · WEB DEVELOPER
           </div>
+
 
           <p class="hero-intro">
             Ciao, sono
           </p>
 
+
           <h1>
             Andrea Russo
           </h1>
+
 
           <h2 class="hero-role">
             Sviluppatore Software
           </h2>
 
+
           <p class="hero-description">
+
             Laureando in Informatica presso l'Università degli Studi
-            di Salerno con esperienza pratica nello sviluppo di
-            applicazioni web e sistemi gestionali, backend Python/Django,
-            frontend React/TypeScript, database MySQL, API REST
-            e configurazione di ambienti server FreeBSD.
+            di Salerno con esperienza pratica nello sviluppo
+            di applicazioni web e sistemi gestionali,
+            backend Python/Django,
+            frontend React/TypeScript,
+            database MySQL,
+            API REST e configurazione
+            di ambienti server FreeBSD.
+
           </p>
 
 
+
           <div class="hero-actions">
+
 
             <a
               class="btn btn-primary"
@@ -282,12 +314,14 @@
               Visualizza i progetti
             </a>
 
+
             <a
               class="btn btn-secondary"
               href="#esperienza"
             >
               Esperienza professionale
             </a>
+
 
             <a
               class="btn btn-outline"
@@ -298,10 +332,13 @@
               Visualizza il CV
             </a>
 
+
           </div>
 
 
+
           <div class="hero-social">
+
 
             <a
               href="https://github.com/AndreaRusso7899"
@@ -311,7 +348,9 @@
               GitHub
             </a>
 
+
             <span>•</span>
+
 
             <a
               href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
@@ -321,13 +360,17 @@
               LinkedIn
             </a>
 
+
             <span>•</span>
+
 
             <a href="mailto:andre.m3m0@gmail.com">
               Email
             </a>
 
+
           </div>
+
 
         </div>
 
@@ -335,14 +378,17 @@
 
     </section>
 
+
   </header>
 
 
+
   <!-- =========================================================
-       CONTENUTO PRINCIPALE
+       MAIN
        ========================================================= -->
 
   <main>
+
 
 
     <!-- =======================================================
@@ -356,6 +402,7 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <span class="section-kicker">
@@ -368,60 +415,85 @@
 
           <p>
             Un percorso orientato allo sviluppo software,
-            all'apprendimento continuo e alla realizzazione
-            di soluzioni concrete.
+            all'apprendimento continuo
+            e alla realizzazione di soluzioni concrete.
           </p>
 
         </div>
 
 
+
         <div class="about-layout">
+
 
           <div class="about-text">
 
+
             <p>
-              Sono <strong>Andrea Russo</strong>, sviluppatore informatico
+
+              Sono <strong>Andrea Russo</strong>,
+              sviluppatore informatico
               e laureando in Informatica presso
               <strong>l'Università degli Studi di Salerno</strong>.
+
             </p>
 
+
             <p>
-              Sono una persona determinata e orientata al risultato,
-              con una forte capacità di concentrazione sia
+
+              Sono una persona determinata
+              e orientata al risultato,
+              con una forte capacità di concentrazione
               nell'implementazione di soluzioni tecniche
-              sia nell'apprendimento di nuove competenze.
+              e nell'apprendimento di nuove competenze.
+
             </p>
 
+
             <p>
+
               Ho maturato esperienza nello sviluppo
               <strong>frontend e backend</strong>,
               nella gestione di database,
               nello sviluppo di API REST,
               nella realizzazione di applicativi gestionali
               e nella configurazione di ambienti server.
+
             </p>
 
+
             <p>
+
               Ho lavorato su applicazioni web utilizzate
               in un contesto tecnico-amministrativo reale,
               occupandomi di implementazione,
-              gestione dei dati, distribuzione,
+              gestione dei dati,
+              distribuzione,
               configurazione e manutenzione.
+
             </p>
 
+
             <p>
-              Il mio obiettivo è continuare a crescere
-              professionalmente come sviluppatore software,
-              contribuendo a progetti concreti e innovativi
-              all'interno di un ambiente collaborativo.
+
+              Il mio obiettivo è continuare
+              a crescere professionalmente
+              come sviluppatore software,
+              contribuendo a progetti concreti
+              e innovativi.
+
             </p>
+
 
           </div>
 
 
+
           <aside class="profile-card">
 
+
             <div class="profile-item">
+
               <span class="profile-label">
                 Professione
               </span>
@@ -429,10 +501,12 @@
               <strong>
                 Sviluppatore Software
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Percorso
               </span>
@@ -440,10 +514,12 @@
               <strong>
                 Laurea in Informatica
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Università
               </span>
@@ -451,10 +527,12 @@
               <strong>
                 Università degli Studi di Salerno
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Area
               </span>
@@ -462,10 +540,12 @@
               <strong>
                 Napoli / Torre Annunziata
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Lingua madre
               </span>
@@ -473,10 +553,12 @@
               <strong>
                 Italiano
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Inglese
               </span>
@@ -484,10 +566,12 @@
               <strong>
                 Livello B1
               </strong>
+
             </div>
 
 
             <div class="profile-item">
+
               <span class="profile-label">
                 Patenti
               </span>
@@ -495,15 +579,20 @@
               <strong>
                 A1 · B
               </strong>
+
             </div>
+
 
           </aside>
 
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -517,6 +606,7 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <span class="section-kicker">
@@ -528,21 +618,30 @@
           </h2>
 
           <p>
-            Applicazioni sviluppate per consolidare
-            HTML, CSS e JavaScript attraverso
-            l'implementazione pratica della logica applicativa,
-            della gestione degli eventi
-            e della manipolazione del DOM.
+
+            Applicazioni sviluppate
+            per consolidare HTML,
+            CSS e JavaScript attraverso
+            la gestione degli eventi,
+            la logica applicativa
+            e la manipolazione del DOM.
+
           </p>
 
         </div>
 
 
+
         <div class="projects-grid">
 
 
-          <!-- PROGETTO 1 -->
+
+          <!-- =================================================
+               PROGETTO 1
+               ================================================= -->
+
           <article class="project-card">
+
 
             <div class="project-top">
 
@@ -557,6 +656,7 @@
             </div>
 
 
+
             <div class="project-icon">
               ❓
             </div>
@@ -568,55 +668,96 @@
 
 
             <p>
-              Gioco interattivo nel quale il giocatore deve
-              individuare un numero segreto generato casualmente
+
+              Gioco interattivo nel quale
+              il giocatore deve individuare
+              un numero segreto generato casualmente
               tra 1 e 20.
+
             </p>
 
+
             <p>
-              L'applicazione fornisce feedback dinamico,
-              gestisce punteggio e record e aggiorna
-              l'interfaccia in tempo reale tramite JavaScript.
+
+              L'applicazione gestisce feedback dinamici,
+              punteggio, record
+              e aggiornamenti dell'interfaccia
+              tramite JavaScript.
+
             </p>
+
 
 
             <div class="project-tags">
+
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>DOM</span>
               <span>Eventi</span>
+
             </div>
+
 
 
             <div class="project-features">
 
               <ul>
-                <li>Manipolazione del DOM</li>
-                <li>Gestione degli eventi</li>
-                <li>Numeri casuali</li>
-                <li>Gestione del punteggio</li>
-                <li>Aggiornamenti dinamici</li>
+
+                <li>
+                  Manipolazione del DOM
+                </li>
+
+                <li>
+                  Gestione degli eventi
+                </li>
+
+                <li>
+                  Numeri casuali
+                </li>
+
+                <li>
+                  Gestione del punteggio
+                </li>
+
+                <li>
+                  Aggiornamenti dinamici
+                </li>
+
               </ul>
 
             </div>
 
 
+
+            <!-- LINK ORIGINALE FUNZIONANTE -->
+
             <a
               class="project-button"
-              href="./indovina%20il%20mio%20numero/"
+              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/guess-my-number/"
               target="_blank"
               rel="noopener noreferrer"
             >
+
               Apri il progetto
-              <span>→</span>
+
+              <span>
+                →
+              </span>
+
             </a>
+
 
           </article>
 
 
-          <!-- PROGETTO 2 -->
+
+          <!-- =================================================
+               PROGETTO 2
+               ================================================= -->
+
           <article class="project-card">
+
 
             <div class="project-top">
 
@@ -631,6 +772,7 @@
             </div>
 
 
+
             <div class="project-icon">
               🎲
             </div>
@@ -642,57 +784,97 @@
 
 
             <p>
-              Gioco a turni per due giocatori basato
-              sul lancio di un dado,
+
+              Gioco a turni per due giocatori
+              basato sul lancio di un dado,
               sulla gestione del rischio
               e sull'accumulo del punteggio.
+
             </p>
 
+
             <p>
+
               JavaScript gestisce il giocatore attivo,
-              i punteggi temporanei, il punteggio globale,
+              i punteggi temporanei,
+              il punteggio globale,
               le condizioni di vittoria
               e il riavvio della partita.
+
             </p>
+
 
 
             <div class="project-tags">
+
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>Logica di gioco</span>
               <span>Stato</span>
+
             </div>
+
 
 
             <div class="project-features">
 
               <ul>
-                <li>Logica applicativa</li>
-                <li>Cambio giocatore</li>
-                <li>Gestione dello stato</li>
-                <li>Condizioni di vittoria</li>
-                <li>Reset della partita</li>
+
+                <li>
+                  Logica applicativa
+                </li>
+
+                <li>
+                  Cambio giocatore
+                </li>
+
+                <li>
+                  Gestione dello stato
+                </li>
+
+                <li>
+                  Condizioni di vittoria
+                </li>
+
+                <li>
+                  Reset della partita
+                </li>
+
               </ul>
 
             </div>
 
 
+
+            <!-- LINK ORIGINALE FUNZIONANTE -->
+
             <a
               class="project-button"
-              href="./gioco%20del%20maiale/"
+              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/pig-game/"
               target="_blank"
               rel="noopener noreferrer"
             >
+
               Apri il progetto
-              <span>→</span>
+
+              <span>
+                →
+              </span>
+
             </a>
+
 
           </article>
 
 
-          <!-- PROGETTO 3 -->
+
+          <!-- =================================================
+               PROGETTO 3
+               ================================================= -->
+
           <article class="project-card">
+
 
             <div class="project-top">
 
@@ -707,6 +889,7 @@
             </div>
 
 
+
             <div class="project-icon">
               ✔
             </div>
@@ -718,61 +901,102 @@
 
 
             <p>
+
               Progetto dedicato alla creazione
-              e gestione di finestre modali interattive
-              attraverso HTML, CSS e JavaScript.
+              e gestione di finestre modali
+              interattive attraverso HTML,
+              CSS e JavaScript.
+
             </p>
 
+
             <p>
-              L'applicazione gestisce apertura e chiusura
-              delle finestre, overlay, classi CSS,
-              eventi del mouse ed eventi da tastiera.
+
+              L'applicazione gestisce
+              apertura e chiusura delle finestre,
+              overlay,
+              classi CSS,
+              eventi del mouse
+              ed eventi da tastiera.
+
             </p>
+
 
 
             <div class="project-tags">
+
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>UI</span>
               <span>Eventi</span>
+
             </div>
+
 
 
             <div class="project-features">
 
               <ul>
-                <li>Finestre modali</li>
-                <li>Overlay</li>
-                <li>Gestione degli eventi</li>
-                <li>Eventi da tastiera</li>
-                <li>Classi CSS dinamiche</li>
+
+                <li>
+                  Finestre modali
+                </li>
+
+                <li>
+                  Overlay
+                </li>
+
+                <li>
+                  Event listener
+                </li>
+
+                <li>
+                  Eventi da tastiera
+                </li>
+
+                <li>
+                  Classi CSS dinamiche
+                </li>
+
               </ul>
 
             </div>
 
 
+
+            <!-- LINK ORIGINALE FUNZIONANTE -->
+
             <a
               class="project-button"
-              href="./ambiente-modale/"
+              href="https://andrearusso7899.github.io/Interactive-Web-Projects-Skill-Development/progetto-modal/"
               target="_blank"
               rel="noopener noreferrer"
             >
+
               Apri il progetto
-              <span>→</span>
+
+              <span>
+                →
+              </span>
+
             </a>
+
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
 
 
+
     <!-- =======================================================
-         ESPERIENZA PROFESSIONALE
+         ESPERIENZA
          ======================================================= -->
 
     <section
@@ -781,6 +1005,7 @@
     >
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -793,18 +1018,23 @@
           </h2>
 
           <p>
+
             Esperienza nella realizzazione
-            e gestione di applicazioni utilizzate
+            e gestione di applicazioni
             a supporto delle attività
             tecnico-amministrative.
+
           </p>
 
         </div>
 
 
+
         <div class="experience-main-card">
 
+
           <div class="experience-heading">
+
 
             <div>
 
@@ -827,19 +1057,26 @@
               Tecnico informatico · Sviluppatore software
             </span>
 
+
           </div>
 
 
+
           <p>
-            Presso l'Area Tecnica del Comune di Torre Annunziata
-            ho realizzato e gestito diversi applicativi web
-            a supporto delle attività tecnico-amministrative,
-            occupandomi dello sviluppo software
-            e della configurazione dell'ambiente server.
+
+            Presso l'Area Tecnica
+            del Comune di Torre Annunziata
+            ho realizzato e gestito
+            diversi applicativi web
+            a supporto delle attività
+            tecnico-amministrative.
+
           </p>
 
 
+
           <div class="experience-skills">
+
             <span>Python</span>
             <span>Django</span>
             <span>HTML</span>
@@ -850,13 +1087,20 @@
             <span>MySQL</span>
             <span>API REST</span>
             <span>FreeBSD</span>
+
           </div>
+
 
         </div>
 
 
-        <!-- MAXIMALL -->
+
+        <!-- ===================================================
+             MAXIMALL
+             =================================================== -->
+
         <article class="professional-project">
+
 
           <div class="professional-project-number">
             01
@@ -865,39 +1109,59 @@
 
           <div class="professional-project-content">
 
+
             <h3>
               Maximall
             </h3>
+
 
             <span class="professional-project-type">
               Gestionale web
             </span>
 
+
             <p>
-              Applicativo sviluppato per la consultazione,
-              gestione e aggiornamento delle informazioni
-              relative alle unità, alle pratiche,
-              ai documenti PDF, agli affidamenti,
-              alle locazioni e ai flussi di lavoro collegati.
+
+              Applicativo sviluppato
+              per la consultazione,
+              gestione e aggiornamento
+              delle informazioni relative
+              alle unità,
+              alle pratiche,
+              ai documenti PDF,
+              agli affidamenti,
+              alle locazioni
+              e ai flussi di lavoro.
+
             </p>
 
 
+
             <div class="feature-grid">
+
               <span>Ricerca dati</span>
               <span>Dashboard</span>
               <span>Gestione utenti</span>
               <span>Audit log</span>
               <span>Esportazione dati</span>
               <span>Caricamento documentale</span>
+
             </div>
 
+
           </div>
+
 
         </article>
 
 
-        <!-- SUE -->
+
+        <!-- ===================================================
+             SUE
+             =================================================== -->
+
         <article class="professional-project">
+
 
           <div class="professional-project-number">
             02
@@ -906,38 +1170,57 @@
 
           <div class="professional-project-content">
 
+
             <h3>
               SUE / Registro Unico
             </h3>
+
 
             <span class="professional-project-type">
               Gestione digitale delle pratiche edilizie
             </span>
 
+
             <p>
-              Sistema realizzato per supportare
-              la gestione digitale delle pratiche edilizie,
-              attraverso funzioni di ricerca,
-              consultazione, inserimento e aggiornamento.
+
+              Sistema realizzato
+              per supportare
+              la gestione digitale
+              delle pratiche edilizie
+              con funzioni di ricerca,
+              consultazione,
+              inserimento
+              e aggiornamento.
+
             </p>
 
 
+
             <div class="feature-grid">
+
               <span>Ricerca pratiche</span>
               <span>Inserimento dati</span>
               <span>Aggiornamento</span>
               <span>Importazione Excel</span>
               <span>Generazione PDF</span>
               <span>Tracciamento modifiche</span>
+
             </div>
 
+
           </div>
+
 
         </article>
 
 
-        <!-- HELP DESK -->
+
+        <!-- ===================================================
+             HELP DESK
+             =================================================== -->
+
         <article class="professional-project">
+
 
           <div class="professional-project-number">
             03
@@ -946,74 +1229,128 @@
 
           <div class="professional-project-content">
 
+
             <h3>
               Sistemi Help Desk
             </h3>
+
 
             <span class="professional-project-type">
               Python / Django · API REST · MySQL · React / TypeScript
             </span>
 
+
             <p>
-              Sviluppo di due sistemi Help Desk
-              dedicati alla gestione delle richieste
-              di assistenza e dei flussi operativi interni.
+
+              Sviluppo di due sistemi
+              Help Desk dedicati
+              alla gestione delle richieste
+              di assistenza
+              e dei flussi operativi interni.
+
             </p>
 
 
+
             <div class="feature-grid">
+
               <span>Ticket</span>
               <span>Utenti</span>
               <span>Uffici</span>
               <span>Notifiche</span>
               <span>Knowledge Base</span>
               <span>Report</span>
+
             </div>
+
 
 
             <div class="architecture">
 
+
               <div class="architecture-node">
-                <strong>Frontend</strong>
-                <span>React / TypeScript</span>
+
+                <strong>
+                  Frontend
+                </strong>
+
+                <span>
+                  React / TypeScript
+                </span>
+
               </div>
+
 
               <span class="architecture-arrow">
                 ↕
               </span>
 
+
               <div class="architecture-node">
-                <strong>API</strong>
-                <span>REST</span>
+
+                <strong>
+                  API
+                </strong>
+
+                <span>
+                  REST
+                </span>
+
               </div>
+
 
               <span class="architecture-arrow">
                 ↕
               </span>
 
+
               <div class="architecture-node">
-                <strong>Backend</strong>
-                <span>Python / Django</span>
+
+                <strong>
+                  Backend
+                </strong>
+
+                <span>
+                  Python / Django
+                </span>
+
               </div>
+
 
               <span class="architecture-arrow">
                 ↕
               </span>
 
+
               <div class="architecture-node">
-                <strong>Database</strong>
-                <span>MySQL</span>
+
+                <strong>
+                  Database
+                </strong>
+
+                <span>
+                  MySQL
+                </span>
+
               </div>
+
 
             </div>
 
+
           </div>
+
 
         </article>
 
 
-        <!-- FREEBSD -->
+
+        <!-- ===================================================
+             FREEBSD
+             =================================================== -->
+
         <article class="professional-project">
+
 
           <div class="professional-project-number">
             04
@@ -1022,16 +1359,20 @@
 
           <div class="professional-project-content">
 
+
             <h3>
               Server FreeBSD
             </h3>
+
 
             <span class="professional-project-type">
               Configurazione · Deploy · Gestione ambiente
             </span>
 
 
+
             <div class="freebsd-project">
+
 
               <div class="freebsd-logo-box">
 
@@ -1045,42 +1386,60 @@
 
               <div>
 
-                <p>
-                  Mi sono occupato della creazione,
-                  manutenzione e gestione di un piccolo
-                  server basato su FreeBSD.
-                </p>
 
                 <p>
-                  Le attività hanno compreso
-                  la configurazione dell'ambiente di esecuzione,
-                  dei servizi applicativi,
-                  dell'avvio automatico,
-                  del deploy dei progetti
-                  e del monitoraggio operativo di base.
+
+                  Mi sono occupato
+                  della creazione,
+                  manutenzione
+                  e gestione
+                  di un piccolo server
+                  basato su FreeBSD.
+
                 </p>
+
+
+                <p>
+
+                  Le attività hanno compreso
+                  configurazione,
+                  servizi applicativi,
+                  avvio automatico,
+                  deploy
+                  e monitoraggio operativo.
+
+                </p>
+
 
               </div>
+
 
             </div>
 
 
+
             <div class="feature-grid">
+
               <span>Configurazione ambiente</span>
               <span>Servizi applicativi</span>
               <span>Avvio automatico</span>
               <span>Deploy</span>
               <span>Hosting applicazioni</span>
               <span>Monitoraggio</span>
+
             </div>
+
 
           </div>
 
+
         </article>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1094,6 +1453,7 @@
 
       <div class="container">
 
+
         <div class="section-header">
 
           <span class="section-kicker">
@@ -1105,16 +1465,20 @@
           </h2>
 
           <p>
-            Tecnologie utilizzate durante
-            il percorso universitario,
+
+            Tecnologie utilizzate
+            durante il percorso universitario,
             i progetti personali
             e le esperienze professionali.
+
           </p>
 
         </div>
 
 
+
         <div class="skills-categories">
+
 
 
           <article class="skill-category">
@@ -1124,6 +1488,7 @@
             </h3>
 
             <div class="technology-list">
+
               <span>Python</span>
               <span>JavaScript</span>
               <span>TypeScript</span>
@@ -1131,43 +1496,51 @@
               <span>C</span>
               <span>C++</span>
               <span>C#</span>
+
             </div>
 
           </article>
 
 
+
           <article class="skill-category">
 
             <h3>
-              Sviluppo Frontend
+              Frontend
             </h3>
 
             <div class="technology-list">
+
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>React</span>
               <span>TypeScript</span>
               <span>Vite</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
 
             <h3>
-              Sviluppo Backend
+              Backend
             </h3>
 
             <div class="technology-list">
+
               <span>Python</span>
               <span>Django</span>
               <span>API REST</span>
               <span>Node.js</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
@@ -1177,12 +1550,15 @@
             </h3>
 
             <div class="technology-list">
+
               <span>SQL</span>
               <span>MySQL</span>
               <span>SQLite</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
@@ -1192,25 +1568,33 @@
             </h3>
 
             <div class="technology-list">
-              <span>Android Studio</span>
+
+              <span>
+                Android Studio
+              </span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
 
             <h3>
-              Unity e sviluppo interattivo
+              Unity
             </h3>
 
             <div class="technology-list">
+
               <span>Unity</span>
               <span>C#</span>
               <span>Scripting</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
@@ -1220,15 +1604,18 @@
             </h3>
 
             <div class="technology-list">
+
               <span>Electron</span>
               <span>React</span>
               <span>JavaScript</span>
               <span>JSON</span>
               <span>SQLite</span>
               <span>Vite</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
@@ -1238,13 +1625,16 @@
             </h3>
 
             <div class="technology-list">
+
               <span>FreeBSD</span>
               <span>Deploy</span>
               <span>Configurazione servizi</span>
               <span>Monitoraggio</span>
+
             </div>
 
           </article>
+
 
 
           <article class="skill-category">
@@ -1254,30 +1644,36 @@
             </h3>
 
             <div class="technology-list">
+
               <span>IntelliJ</span>
               <span>Visual Studio</span>
               <span>Eclipse</span>
               <span>NetBeans</span>
               <span>Dev-C++</span>
               <span>Android Studio</span>
+
             </div>
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
 
 
+
     <!-- =======================================================
-         TECNOLOGIE PRINCIPALI
+         TECNOLOGIE
          ======================================================= -->
 
     <section class="section section-technologies">
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1292,16 +1688,20 @@
         </div>
 
 
+
         <div class="tech-grid">
+
 
 
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
                 alt="Python"
               >
+
             </div>
 
             <h3>
@@ -1309,20 +1709,22 @@
             </h3>
 
             <p>
-              Backend, elaborazione dati
-              e logica applicativa.
+              Backend e logica applicativa.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
                 alt="Django"
               >
+
             </div>
 
             <h3>
@@ -1330,20 +1732,22 @@
             </h3>
 
             <p>
-              Backend web,
-              API e applicazioni gestionali.
+              Backend web e API.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                 alt="JavaScript"
               >
+
             </div>
 
             <h3>
@@ -1351,20 +1755,22 @@
             </h3>
 
             <p>
-              Interattività,
-              DOM e logica frontend.
+              Interattività e DOM.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                 alt="React"
               >
+
             </div>
 
             <h3>
@@ -1372,20 +1778,22 @@
             </h3>
 
             <p>
-              Interfacce moderne
-              basate su componenti.
+              Interfacce basate su componenti.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                 alt="TypeScript"
               >
+
             </div>
 
             <h3>
@@ -1393,20 +1801,22 @@
             </h3>
 
             <p>
-              Sviluppo frontend
-              strutturato e tipizzato.
+              Sviluppo frontend tipizzato.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
                 alt="MySQL"
               >
+
             </div>
 
             <h3>
@@ -1414,20 +1824,22 @@
             </h3>
 
             <p>
-              Gestione,
-              interrogazione e archiviazione dati.
+              Gestione dei dati.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                 alt="HTML5"
               >
+
             </div>
 
             <h3>
@@ -1435,20 +1847,22 @@
             </h3>
 
             <p>
-              Struttura semantica
-              delle applicazioni web.
+              Struttura delle applicazioni web.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                 alt="CSS3"
               >
+
             </div>
 
             <h3>
@@ -1456,20 +1870,22 @@
             </h3>
 
             <p>
-              Stile,
-              layout e responsive design.
+              Layout e responsive design.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
                 alt="Java"
               >
+
             </div>
 
             <h3>
@@ -1477,20 +1893,22 @@
             </h3>
 
             <p>
-              Programmazione
-              orientata agli oggetti.
+              Programmazione orientata agli oggetti.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
                 alt="C++"
               >
+
             </div>
 
             <h3>
@@ -1498,20 +1916,22 @@
             </h3>
 
             <p>
-              Programmazione
-              e fondamenti informatici.
+              Programmazione e fondamenti.
             </p>
 
           </article>
 
 
+
           <article class="tech-card">
 
             <div class="tech-logo">
+
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg"
                 alt="Electron"
               >
+
             </div>
 
             <h3>
@@ -1519,11 +1939,11 @@
             </h3>
 
             <p>
-              Applicazioni desktop
-              multipiattaforma.
+              Applicazioni desktop.
             </p>
 
           </article>
+
 
 
           <article class="tech-card">
@@ -1542,17 +1962,19 @@
             </h3>
 
             <p>
-              Ambiente server,
-              deployment e gestione servizi.
+              Server e gestione servizi.
             </p>
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1565,6 +1987,7 @@
     >
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1579,7 +2002,9 @@
         </div>
 
 
+
         <article class="education-card">
+
 
           <div class="education-icon">
             🎓
@@ -1588,40 +2013,51 @@
 
           <div class="education-content">
 
+
             <span class="education-status">
               Percorso in corso
             </span>
+
 
             <h3>
               Laurea in Informatica
             </h3>
 
+
             <h4>
               Università degli Studi di Salerno
             </h4>
 
+
             <p>
-              Percorso universitario orientato
-              allo sviluppo di competenze
-              nella programmazione,
+
+              Percorso universitario
+              orientato allo sviluppo
+              di competenze nella programmazione,
               negli algoritmi,
               nello sviluppo software,
               nei sistemi informatici,
               nei database
               e nelle tecnologie web.
+
             </p>
+
 
             <span class="education-level">
               Livello EQF 6
             </span>
 
+
           </div>
 
+
         </article>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1631,6 +2067,7 @@
     <section class="section section-soft-skills">
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1643,6 +2080,7 @@
           </h2>
 
         </div>
+
 
 
         <div class="soft-skills-grid">
@@ -1659,12 +2097,13 @@
             </h3>
 
             <p>
-              Capacità di collaborare
-              maturata attraverso progetti universitari
-              e attività professionali.
+              Collaborazione
+              in progetti universitari
+              e professionali.
             </p>
 
           </article>
+
 
 
           <article class="soft-skill-card">
@@ -1679,11 +2118,12 @@
 
             <p>
               Approccio focalizzato
-              sul raggiungimento degli obiettivi
-              e sulla ricerca di soluzioni concrete.
+              sugli obiettivi
+              e sulle soluzioni concrete.
             </p>
 
           </article>
+
 
 
           <article class="soft-skill-card">
@@ -1697,12 +2137,13 @@
             </h3>
 
             <p>
-              Interesse costante verso nuove tecnologie,
-              metodologie e strumenti
-              di sviluppo software.
+              Interesse verso
+              nuove tecnologie
+              e strumenti di sviluppo.
             </p>
 
           </article>
+
 
 
           <article class="soft-skill-card">
@@ -1716,18 +2157,21 @@
             </h3>
 
             <p>
-              Buone capacità di ascolto,
-              comunicazione e collaborazione
-              con colleghi e utenti.
+              Capacità di ascolto,
+              comunicazione
+              e collaborazione.
             </p>
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1737,6 +2181,7 @@
     <section class="section section-languages">
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1751,7 +2196,9 @@
         </div>
 
 
+
         <div class="languages-grid">
+
 
 
           <article class="language-card">
@@ -1761,11 +2208,19 @@
             </span>
 
             <div>
-              <h3>Italiano</h3>
-              <strong>Lingua madre</strong>
+
+              <h3>
+                Italiano
+              </h3>
+
+              <strong>
+                Lingua madre
+              </strong>
+
             </div>
 
           </article>
+
 
 
           <article class="language-card">
@@ -1793,11 +2248,14 @@
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1807,6 +2265,7 @@
     <section class="section section-interests">
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1821,7 +2280,9 @@
         </div>
 
 
+
         <div class="interests-grid">
+
 
 
           <article class="interest-card">
@@ -1835,12 +2296,11 @@
             </h3>
 
             <p>
-              Interesse che contribuisce
-              a mantenere uno stile di vita
-              attivo e competitivo.
+              Sport e competizione.
             </p>
 
           </article>
+
 
 
           <article class="interest-card">
@@ -1854,12 +2314,12 @@
             </h3>
 
             <p>
-              Passione attraverso cui
-              esprimere creatività
+              Creatività
               e attenzione ai dettagli.
             </p>
 
           </article>
+
 
 
           <article class="interest-card">
@@ -1873,18 +2333,21 @@
             </h3>
 
             <p>
-              Interesse per il settore,
-              le tecnologie
-              e l'innovazione applicata.
+              Tecnologia,
+              innovazione
+              e settore automobilistico.
             </p>
 
           </article>
 
+
         </div>
+
 
       </div>
 
     </section>
+
 
 
     <!-- =======================================================
@@ -1895,45 +2358,74 @@
 
       <div class="container">
 
+
         <div class="objectives-card">
+
 
           <span class="section-kicker">
             OBIETTIVI PROFESSIONALI
           </span>
 
+
           <h2>
             Il prossimo passo
           </h2>
 
+
           <p>
-            Sono interessato a opportunità professionali
-            che mi permettano di mettere in pratica
-            le conoscenze acquisite,
-            contribuire a progetti software reali
-            e continuare a crescere professionalmente.
+
+            Sono interessato
+            a opportunità professionali
+            che mi permettano
+            di contribuire
+            a progetti software reali
+            e continuare
+            a crescere professionalmente.
+
           </p>
 
 
+
           <div class="roles">
-            <span>Sviluppatore Software</span>
-            <span>Sviluppatore Backend</span>
-            <span>Sviluppatore Frontend</span>
-            <span>Sviluppatore Full Stack</span>
-            <span>Sviluppatore Python</span>
-            <span>Sviluppatore Web</span>
+
+            <span>
+              Sviluppatore Software
+            </span>
+
+            <span>
+              Backend Developer
+            </span>
+
+            <span>
+              Frontend Developer
+            </span>
+
+            <span>
+              Full Stack Developer
+            </span>
+
+            <span>
+              Python Developer
+            </span>
+
+            <span>
+              Web Developer
+            </span>
+
           </div>
 
+
         </div>
+
 
       </div>
 
     </section>
 
 
+
     <!-- =======================================================
          CONTATTI
-         QUESTA È L'ULTIMA SEZIONE DELLA PAGINA.
-         NON ESISTE PIÙ UNA SEZIONE CV INTERNA.
          ======================================================= -->
 
     <section
@@ -1942,6 +2434,7 @@
     >
 
       <div class="container">
+
 
         <div class="section-header">
 
@@ -1954,16 +2447,21 @@
           </h2>
 
           <p>
+
             Per opportunità professionali,
-            collaborazioni o informazioni
-            sui miei progetti puoi contattarmi
+            collaborazioni
+            o informazioni sui miei progetti
+            puoi contattarmi
             attraverso i canali seguenti.
+
           </p>
 
         </div>
 
 
+
         <div class="contact-grid">
+
 
 
           <a
@@ -1988,6 +2486,7 @@
             </div>
 
           </a>
+
 
 
           <a
@@ -2016,6 +2515,7 @@
           </a>
 
 
+
           <a
             class="contact-card"
             href="https://github.com/AndreaRusso7899"
@@ -2041,23 +2541,28 @@
 
           </a>
 
+
         </div>
+
 
       </div>
 
     </section>
 
+
   </main>
+
 
 
   <!-- =========================================================
        FOOTER
-       DEVE ESSERE L'ULTIMO BLOCCO VISIBILE DELLA PAGINA
        ========================================================= -->
 
   <footer class="footer">
 
+
     <div class="container footer-container">
+
 
       <div>
 
@@ -2072,11 +2577,14 @@
       </div>
 
 
+
       <div class="footer-links">
+
 
         <a href="#home">
           Torna su
         </a>
+
 
         <a
           href="./informazioni/CV-Andrea-Russo.pdf"
@@ -2086,6 +2594,7 @@
           CV
         </a>
 
+
         <a
           href="https://github.com/AndreaRusso7899"
           target="_blank"
@@ -2093,6 +2602,7 @@
         >
           GitHub
         </a>
+
 
         <a
           href="https://www.linkedin.com/in/andrea-russo-6738a7259/"
@@ -2102,26 +2612,34 @@
           LinkedIn
         </a>
 
+
       </div>
 
+
     </div>
+
 
 
     <div class="container footer-bottom">
 
       <p>
+
         ©
         <span id="currentYear"></span>
-        Andrea Russo. Tutti i diritti riservati.
+        Andrea Russo.
+        Tutti i diritti riservati.
+
       </p>
 
     </div>
 
+
   </footer>
 
 
+
   <!-- =========================================================
-       PULSANTE TORNA SU
+       FRECCIA TORNA SU
        ========================================================= -->
 
   <button
@@ -2135,24 +2653,30 @@
   </button>
 
 
+
   <!-- =========================================================
        JAVASCRIPT
        ========================================================= -->
 
   <script>
 
+
     /* ANNO AUTOMATICO */
 
     const currentYear =
       document.getElementById("currentYear");
 
+
     if (currentYear) {
+
       currentYear.textContent =
         new Date().getFullYear();
+
     }
 
 
-    /* PULSANTE TORNA SU */
+
+    /* FRECCIA TORNA SU */
 
     const backToTopButton =
       document.getElementById("backToTop");
@@ -2160,42 +2684,61 @@
 
     if (backToTopButton) {
 
+
       function updateBackToTop() {
 
+
         if (window.scrollY > 450) {
+
           backToTopButton.classList.add("show");
+
         } else {
+
           backToTopButton.classList.remove("show");
+
         }
 
+
       }
+
 
 
       window.addEventListener(
         "scroll",
         updateBackToTop,
-        { passive: true }
+        {
+          passive: true
+        }
       );
 
 
       updateBackToTop();
 
 
+
       backToTopButton.addEventListener(
         "click",
         function () {
 
+
           window.scrollTo({
+
             top: 0,
+
             behavior: "smooth"
+
           });
+
 
         }
       );
 
+
     }
 
+
   </script>
+
 
 </body>
 
